@@ -124,7 +124,8 @@ Object.assign(translations.en, {
   popupTitle: "Receive Muruga's Answer",
   popupText:
     "Close your eyes and think deeply about the situation that is on your mind.\nOffer your question to Lord Muruga with faith and sincerity.\nNow, ask Muruga to guide you towards a number between 1 and 100.\nThe number that naturally appears in your mind is not a coincidence.\nThat number carries Lord Muruga's message and guidance for you.\nYour Question... Your Faith... Muruga's Answer.",
-  popupInputLabel: "Enter the first number that comes to your mind, from 1 to 100"
+  popupInputLabel: "Enter the first number that comes to your mind, from 1 to 100",
+  popupLoading: "Receiving Muruga's message..."
 });
 
 Object.assign(translations.ta, {
@@ -132,7 +133,8 @@ Object.assign(translations.ta, {
   popupTitle: "முருகனின் பதிலை பெறுங்கள்",
   popupText:
     "உங்கள் மனதில் இருக்கும் கேள்வி அல்லது பிரச்சனையை அமைதியாக நினைத்துக் கொள்ளுங்கள்.\nமுழு நம்பிக்கையுடன் முருகப்பெருமானிடம் பிரார்த்தனை செய்து, 1 முதல் 100 வரை ஒரு எண்ணை அருளுமாறு வேண்டுங்கள்.\nஉங்கள் மனதில் இயல்பாக தோன்றும் முதல் எண்ணை ஏற்றுக் கொள்ளுங்கள்.\nஅந்த எண் வெறும் எண்ணல்ல...\nஅது அந்த தருணத்தில் முருகப்பெருமான் உங்களுக்காக வழங்கும் வழிகாட்டுதலும் பதிலும் ஆகும்.\nகேள்வி உங்களுடையது... பதில் முருகனுடையது.",
-  popupInputLabel: "உங்கள் மனதில் தோன்றிய முதல் எண்ணை 1 முதல் 100 வரை உள்ளிடுங்கள்"
+  popupInputLabel: "உங்கள் மனதில் தோன்றிய முதல் எண்ணை 1 முதல் 100 வரை உள்ளிடுங்கள்",
+  popupLoading: "முருகன் அருள்வாக்கு பெறப்படுகிறது..."
 });
 
 const languageButtons = document.querySelectorAll(".lang-button");
@@ -145,6 +147,7 @@ const muruganMessageForm = document.querySelector("#murugan-message-form");
 const muruganNumberInput = document.querySelector("#murugan-number");
 const muruganMessage = document.querySelector("#murugan-message");
 const messageError = document.querySelector("#message-error");
+const loadingPopup = document.querySelector("#loading-popup");
 
 const muruganMessages = [
   "ஒவ்வொரு காலையும் ஒரு புதிய வாய்ப்பைத் தருகிறது. இன்று நீங்கள் எடுக்கும் சிறிய ஒரு முன்னேற்ற அடியும் நாளைய பெரிய வெற்றிக்கான அடித்தளமாக மாறலாம். உங்களை மற்றவர்களுடன் ஒப்பிட வேண்டாம்; உங்கள் பயணம் தனித்துவமானது.\n மெதுவாக நடந்தாலும் பரவாயில்லை; நின்றுவிடாமல் இருப்பதே உண்மையான வெற்றி.",
@@ -335,6 +338,8 @@ function closeDevotionPopup() {
   if (messageError) {
     messageError.textContent = "";
   }
+
+  muruganMessageForm?.classList.remove("is-loading");
 }
 
 function openMessagePopup() {
@@ -344,6 +349,24 @@ function openMessagePopup() {
 
   messagePopup.classList.add("active");
   messagePopup.setAttribute("aria-hidden", "false");
+}
+
+function openLoadingPopup() {
+  if (!loadingPopup) {
+    return;
+  }
+
+  loadingPopup.classList.add("active");
+  loadingPopup.setAttribute("aria-hidden", "false");
+}
+
+function closeLoadingPopup() {
+  if (!loadingPopup) {
+    return;
+  }
+
+  loadingPopup.classList.remove("active");
+  loadingPopup.setAttribute("aria-hidden", "true");
 }
 
 function closeMessagePopup() {
@@ -395,8 +418,17 @@ muruganMessageForm?.addEventListener("submit", (event) => {
     muruganMessage.textContent = muruganMessages[selectedNumber - 1];
   }
 
+  muruganMessageForm.classList.add("is-loading");
+  muruganNumberInput?.setAttribute("disabled", "true");
   closeDevotionPopup();
-  openMessagePopup();
+  openLoadingPopup();
+
+  window.setTimeout(() => {
+    muruganNumberInput?.removeAttribute("disabled");
+    muruganMessageForm.classList.remove("is-loading");
+    closeLoadingPopup();
+    openMessagePopup();
+  }, 2000);
 });
 
 devotionPopup?.addEventListener("click", (event) => {
@@ -416,6 +448,7 @@ messagePopup?.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeDevotionPopup();
+    closeLoadingPopup();
     closeMessagePopup();
   }
 });

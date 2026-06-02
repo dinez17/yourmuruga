@@ -610,6 +610,11 @@ body.lang-ta .hero-copy {
   border-top: 1px solid rgba(7, 27, 36, 0.12);
 }
 
+.message-form.is-loading {
+  opacity: 0.62;
+  pointer-events: none;
+}
+
 .message-form label {
   display: block;
   color: var(--peacock-neck);
@@ -657,6 +662,40 @@ body.lang-ta .hero-copy {
   color: #a83a24;
   font-size: 12px;
   font-weight: 700;
+}
+
+.loading-card {
+  align-items: center;
+  gap: 12px;
+  display: flex;
+  min-width: min(360px, 100%);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  padding: 24px 28px;
+  color: var(--peacock-neck);
+  background: var(--paper);
+  box-shadow: 0 28px 80px rgba(3, 36, 61, 0.34);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.loading-card span {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(5, 47, 87, 0.18);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 800ms linear infinite;
+}
+
+.loading-card p {
+  margin: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .murugan-message {
