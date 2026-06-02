@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Your Muruga is a bilingual Tamil and English devotional website for Lord Muruga with prayers, sacred places, festivals, and daily inspiration."
+    />
+    <title>Your Muruga | Lord Muruga Devotional Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Your Muruga home">
+        <span class="brand-mark">வேல்</span>
+        <span>
+          <strong>Your Muruga</strong>
+          <small data-i18n="brandTag">Devotion in Tamil and English</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#prayers" data-i18n="navPrayers">Prayers</a>
+        <a href="#temples" data-i18n="navTemples">Sacred Places</a>
+        <a href="#festivals" data-i18n="navFestivals">Festivals</a>
+      </nav>
+
+      <div class="language-switch" aria-label="Language">
+        <button class="lang-button active" type="button" data-lang="en">EN</button>
+        <button class="lang-button" type="button" data-lang="ta">தமிழ்</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/muruga-hero.png" alt="Devotional Lord Muruga temple hill artwork" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="heroEyebrow">Om Saravana Bhava</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Your Muruga</h1>
+          <p class="hero-copy" data-i18n="heroCopy">
+            A peaceful devotional space for Lord Muruga, created with Tamil and English prayers, sacred stories, temple memories, and daily inspiration.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#prayers" data-i18n="heroPrimary">Begin Prayer</a>
+            <a class="secondary-action" href="#temples" data-i18n="heroSecondary">Explore Arupadai Veedu</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="daily-band" aria-labelledby="daily-title">
+        <div>
+          <p class="section-kicker" data-i18n="dailyKicker">Today’s Reflection</p>
+          <h2 id="daily-title" data-i18n="dailyTitle">Let courage become devotion, and devotion become service.</h2>
+        </div>
+        <p data-i18n="dailyCopy">
+          Offer one clear thought, one kind action, and one grateful prayer at the feet of Muruga.
+        </p>
+      </section>
+
+      <section class="section" id="prayers" aria-labelledby="prayers-title">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="prayersKicker">Devotional Practice</p>
+          <h2 id="prayers-title" data-i18n="prayersTitle">Prayers For A Calm Heart</h2>
+        </div>
+        <div class="prayer-layout">
+          <article class="prayer-panel">
+            <span class="panel-icon">ॐ</span>
+            <h3 data-i18n="prayerOneTitle">Short Chant</h3>
+            <p class="mantra" data-i18n="prayerOneText">Om Saravana Bhava</p>
+            <p data-i18n="prayerOneCopy">Chant slowly with attention on the breath and the vel as a symbol of clarity.</p>
+          </article>
+          <article class="prayer-panel">
+            <span class="panel-icon">வேல்</span>
+            <h3 data-i18n="prayerTwoTitle">Vel Blessing</h3>
+            <p class="mantra" data-i18n="prayerTwoText">Vel Vel Muruga, Vetri Vel Muruga</p>
+            <p data-i18n="prayerTwoCopy">A prayer for courage, protection, wisdom, and victory over inner confusion.</p>
+          </article>
+          <article class="prayer-panel">
+            <span class="panel-icon">மயில்</span>
+            <h3 data-i18n="prayerThreeTitle">Evening Gratitude</h3>
+            <p class="mantra" data-i18n="prayerThreeText">Guide my words, my work, and my heart.</p>
+            <p data-i18n="prayerThreeCopy">End the day by remembering grace, family, teachers, and all unseen help.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section places-section" id="temples" aria-labelledby="temples-title">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="templesKicker">Six Sacred Abodes</p>
+          <h2 id="temples-title" data-i18n="templesTitle">Arupadai Veedu</h2>
+        </div>
+        <div class="temple-grid">
+          <article><strong>Thiruparankundram</strong><span data-i18n="placeOne">Grace of divine union</span></article>
+          <article><strong>Thiruchendur</strong><span data-i18n="placeTwo">Victory beside the sea</span></article>
+          <article><strong>Palani</strong><span data-i18n="placeThree">Wisdom of renunciation</span></article>
+          <article><strong>Swamimalai</strong><span data-i18n="placeFour">The guru who teaches truth</span></article>
+          <article><strong>Thiruthani</strong><span data-i18n="placeFive">Peace after battle</span></article>
+          <article><strong>Pazhamudircholai</strong><span data-i18n="placeSix">Blessing among green hills</span></article>
+        </div>
+      </section>
+
+      <section class="section festivals-section" id="festivals" aria-labelledby="festivals-title">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="festivalsKicker">Sacred Calendar</p>
+          <h2 id="festivals-title" data-i18n="festivalsTitle">Festivals To Remember</h2>
+        </div>
+        <div class="festival-list">
+          <article>
+            <time>Thai Poosam</time>
+            <p data-i18n="festivalOne">A day of devotion, kavadi, prayer, and surrender to Muruga’s grace.</p>
+          </article>
+          <article>
+            <time>Vaikasi Visakam</time>
+            <p data-i18n="festivalTwo">Celebrates the divine appearance of Lord Muruga with worship and joy.</p>
+          </article>
+          <article>
+            <time>Kanda Sashti</time>
+            <p data-i18n="festivalThree">Six days of fasting, discipline, and victory of light over darkness.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footerText">Made with devotion for Lord Muruga devotees around the world.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
