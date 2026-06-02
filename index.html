@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ta">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,124 +16,121 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="lang-ta">
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Your Muruga home">
         <span class="brand-mark">வேல்</span>
         <span>
           <strong>Your Muruga</strong>
-          <small data-i18n="brandTag">Devotion in Tamil and English</small>
+          <small data-i18n="brandTag">தமிழ் மற்றும் ஆங்கில பக்தி</small>
         </span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#prayers" data-i18n="navPrayers">Prayers</a>
-        <a href="#temples" data-i18n="navTemples">Sacred Places</a>
-        <a href="#festivals" data-i18n="navFestivals">Festivals</a>
-      </nav>
-
       <div class="language-switch" aria-label="Language">
-        <button class="lang-button active" type="button" data-lang="en">EN</button>
-        <button class="lang-button" type="button" data-lang="ta">தமிழ்</button>
+        <button class="lang-button" type="button" data-lang="en">EN</button>
+        <button class="lang-button active" type="button" data-lang="ta">தமிழ்</button>
       </div>
     </header>
 
     <main id="home">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-slider" aria-label="Lord Muruga hero images">
-          <img class="hero-slide active" src="assets/muruga-slide-2.png" alt="Lord Muruga standing in a golden temple shrine with peacock" />
+          <img
+            class="hero-slide active"
+            src="assets/muruga-slide-2.png"
+            alt="Lord Muruga standing in a golden temple shrine with peacock"
+          />
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow" data-i18n="heroEyebrow">Om Saravana Bhava</p>
-          <h1 id="hero-title" data-i18n="heroTitle">Grace-Giving Darshan of Lord Murugan</h1>
+          <p class="eyebrow" data-i18n="heroEyebrow">ஓம் சரவண பவ</p>
+          <h1 id="hero-title" data-i18n="heroTitle">அருள் தரும் முருகன் தரிசனம்</h1>
           <p class="hero-copy" data-i18n="heroCopy">
-            Kandan blesses with the Vel and the peacock. Feel Lord Murugan's divine grace every day, and receive peace of mind and spiritual strength.
+            வேலும் மயிலும் உடன் அருள்புரியும் கந்தன். ஒவ்வொரு நாளும் முருகனின் திருவருளை உணர்ந்து, மன அமைதியையும் ஆன்மிக சக்தியையும் பெறுங்கள்.
           </p>
           <div class="hero-actions">
-            <a class="primary-action" href="#prayers" data-i18n="heroPrimary">🙏 See Darshan</a>
-            <a class="secondary-action" href="#temples" data-i18n="heroSecondary">📖 Today's Prayer</a>
+            <a class="primary-action" href="#welcome" data-i18n="heroPrimary">🙏 தரிசனம் காணுங்கள்</a>
+            <a class="secondary-action" href="#daily-prayer" data-i18n="heroSecondary">📖 இன்றைய பிரார்த்தனை</a>
           </div>
         </div>
       </section>
 
-      <section class="daily-band" aria-labelledby="daily-title">
-        <div>
-          <p class="section-kicker" data-i18n="dailyKicker">Today’s Reflection</p>
-          <h2 id="daily-title" data-i18n="dailyTitle">Let courage become devotion, and devotion become service.</h2>
-        </div>
-        <p data-i18n="dailyCopy">
-          Offer one clear thought, one kind action, and one grateful prayer at the feet of Muruga.
-        </p>
-      </section>
-
-      <section class="section" id="prayers" aria-labelledby="prayers-title">
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="prayersKicker">Devotional Practice</p>
-          <h2 id="prayers-title" data-i18n="prayersTitle">Prayers For A Calm Heart</h2>
-        </div>
-        <div class="prayer-layout">
-          <article class="prayer-panel">
-            <span class="panel-icon">ॐ</span>
-            <h3 data-i18n="prayerOneTitle">Short Chant</h3>
-            <p class="mantra" data-i18n="prayerOneText">Om Saravana Bhava</p>
-            <p data-i18n="prayerOneCopy">Chant slowly with attention on the breath and the vel as a symbol of clarity.</p>
-          </article>
-          <article class="prayer-panel">
-            <span class="panel-icon">வேல்</span>
-            <h3 data-i18n="prayerTwoTitle">Vel Blessing</h3>
-            <p class="mantra" data-i18n="prayerTwoText">Vel Vel Muruga, Vetri Vel Muruga</p>
-            <p data-i18n="prayerTwoCopy">A prayer for courage, protection, wisdom, and victory over inner confusion.</p>
-          </article>
-          <article class="prayer-panel">
-            <span class="panel-icon">மயில்</span>
-            <h3 data-i18n="prayerThreeTitle">Evening Gratitude</h3>
-            <p class="mantra" data-i18n="prayerThreeText">Guide my words, my work, and my heart.</p>
-            <p data-i18n="prayerThreeCopy">End the day by remembering grace, family, teachers, and all unseen help.</p>
-          </article>
+      <section class="section welcome-section" id="welcome" aria-labelledby="welcome-title">
+        <div class="content-split">
+          <div>
+            <div class="section-heading">
+              <p class="section-kicker" data-i18n="welcomeKicker">வரவேற்பு பகுதி</p>
+              <h2 id="welcome-title" data-i18n="welcomeTitle">வருக! முருகனின் அருள் உலகிற்கு</h2>
+            </div>
+            <p class="section-body" data-i18n="welcomeCopy">
+              தமிழர்களின் இதய தெய்வமாக விளங்கும் ஸ்ரீ முருகப் பெருமான், அறிவு, தைரியம், வெற்றி மற்றும் ஆன்மிக ஒளியின் வடிவமாக போற்றப்படுகிறார். இத்தளத்தின் மூலம் முருகனின் திருத்தலங்கள், பக்திப் பாடல்கள், பிரார்த்தனைகள் மற்றும் அரிய தகவல்களை அறிந்து கொள்ளலாம்.
+            </p>
+          </div>
+          <figure class="section-image">
+            <img src="assets/muruga-hero.png" alt="Blessing form of Lord Muruga with peacock" />
+          </figure>
         </div>
       </section>
 
-      <section class="section places-section" id="temples" aria-labelledby="temples-title">
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="templesKicker">Six Sacred Abodes</p>
-          <h2 id="temples-title" data-i18n="templesTitle">Arupadai Veedu</h2>
-        </div>
-        <div class="temple-grid">
-          <article><strong>Thiruparankundram</strong><span data-i18n="placeOne">Grace of divine union</span></article>
-          <article><strong>Thiruchendur</strong><span data-i18n="placeTwo">Victory beside the sea</span></article>
-          <article><strong>Palani</strong><span data-i18n="placeThree">Wisdom of renunciation</span></article>
-          <article><strong>Swamimalai</strong><span data-i18n="placeFour">The guru who teaches truth</span></article>
-          <article><strong>Thiruthani</strong><span data-i18n="placeFive">Peace after battle</span></article>
-          <article><strong>Pazhamudircholai</strong><span data-i18n="placeSix">Blessing among green hills</span></article>
+      <section class="section divine-section" aria-labelledby="quote-title">
+        <div class="content-split reverse">
+          <figure class="section-image dark-image">
+            <img src="assets/muruga-slide-2.png" alt="Lord Muruga in golden temple darshan" />
+          </figure>
+          <div class="devotional-card quote-card">
+            <p class="section-kicker" data-i18n="quoteKicker">தினசரி அருள்வாக்கு</p>
+            <h2 id="quote-title" data-i18n="quoteTitle">🌸 இன்றைய முருகன் அருள்வாக்கு</h2>
+            <blockquote data-i18n="quoteText">
+              "நம்பிக்கையுடன் என்னை நினைத்தால், பயம் விலகும்; பக்தியுடன் என்னை வணங்கினால், வெற்றி உன்னை தேடும்."
+            </blockquote>
+            <p class="quote-source" data-i18n="quoteSource">– ஸ்ரீ முருகப் பெருமான்</p>
+          </div>
         </div>
       </section>
 
-      <section class="section festivals-section" id="festivals" aria-labelledby="festivals-title">
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="festivalsKicker">Sacred Calendar</p>
-          <h2 id="festivals-title" data-i18n="festivalsTitle">Festivals To Remember</h2>
-        </div>
-        <div class="festival-list">
-          <article>
-            <time>Thai Poosam</time>
-            <p data-i18n="festivalOne">A day of devotion, kavadi, prayer, and surrender to Muruga’s grace.</p>
-          </article>
-          <article>
-            <time>Vaikasi Visakam</time>
-            <p data-i18n="festivalTwo">Celebrates the divine appearance of Lord Muruga with worship and joy.</p>
-          </article>
-          <article>
-            <time>Kanda Sashti</time>
-            <p data-i18n="festivalThree">Six days of fasting, discipline, and victory of light over darkness.</p>
-          </article>
+      <section class="section prayer-section" id="daily-prayer" aria-labelledby="prayer-title">
+        <div class="content-split">
+          <div class="devotional-card prayer-card">
+            <p class="section-kicker" data-i18n="prayerKicker">தினசரி பிரார்த்தனை பகுதி</p>
+            <h2 id="prayer-title" data-i18n="dailyPrayerTitle">🙏 இன்றைய பிரார்த்தனை</h2>
+            <p data-i18n="dailyPrayerText">
+              ஓம் சரவணபவா! என் மனதில் உள்ள குழப்பங்களை நீக்கி, நல்ல எண்ணங்களையும், தைரியத்தையும், வெற்றியையும் அருள்வாயாக.
+            </p>
+          </div>
+          <figure class="section-image prayer-image">
+            <img src="assets/muruga-hero.png" alt="Lord Muruga child form with vel and peacock" />
+          </figure>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p data-i18n="footerText">Made with devotion for Lord Muruga devotees around the world.</p>
-    </footer>
+    <div class="devotion-popup" id="devotion-popup" aria-hidden="true">
+      <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+        <button class="popup-close" type="button" aria-label="Close message">×</button>
+        <p class="section-kicker" data-i18n="popupKicker">முருகன் அருள்</p>
+        <h2 id="popup-title" data-i18n="popupTitle">ஓம் சரவண பவ</h2>
+        <p data-i18n="popupText">
+          முருகனின் அருள் உங்கள் இல்லத்திலும் இதயத்திலும் அமைதியை தரட்டும்.
+        </p>
+        <form class="message-form" id="murugan-message-form">
+          <label for="murugan-number" data-i18n="popupInputLabel">1 முதல் 10 வரை ஒரு எண்ணைத் தேர்வு செய்யுங்கள்</label>
+          <div class="message-controls">
+            <input id="murugan-number" name="muruganNumber" type="number" min="1" max="100" inputmode="numeric" />
+            <button type="submit" data-i18n="popupButton">அருள்வாக்கு காண்க</button>
+          </div>
+        </form>
+        <p class="message-error" id="message-error" data-i18n="popupError" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="devotion-popup message-popup" id="message-popup" aria-hidden="true">
+      <div class="popup-card message-popup-card" role="dialog" aria-modal="true" aria-labelledby="message-popup-title">
+        <button class="popup-close message-popup-close" type="button" aria-label="Close message">×</button>
+        <p class="section-kicker" data-i18n="messagePopupKicker">முருகன் அருள்வாக்கு</p>
+        <h2 id="message-popup-title" data-i18n="messagePopupTitle">உங்களுக்கான அருள் செய்தி</h2>
+        <div class="murugan-message large-message" id="murugan-message" aria-live="polite"></div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
