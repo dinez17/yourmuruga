@@ -43,80 +43,163 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow" data-i18n="heroEyebrow">ஓம் சரவண பவ</p>
-          <h1 id="hero-title" data-i18n="heroTitle">அருள் தரும் முருகன் தரிசனம்</h1>
+          <p class="eyebrow" data-i18n="heroEyebrow">ஒரு எண் மட்டுமல்ல...<br />ஒரு வழிகாட்டுதல்...<br />ஒரு புதிய நம்பிக்கை...</p>
+          <h1 id="hero-title" data-i18n="heroTitle">YourMuruga</h1>
           <p class="hero-copy" data-i18n="heroCopy">
-            வேலும் மயிலும் உடன் அருள்புரியும் கந்தன். ஒவ்வொரு நாளும் முருகனின் திருவருளை உணர்ந்து, மன அமைதியையும் ஆன்மிக சக்தியையும் பெறுங்கள்.
+            வாழ்க்கையின் சவால்கள், குழப்பங்கள் மற்றும் முக்கியமான முடிவுகளின் நேரங்களில், முருகப்பெருமானின் ஞானத்தால் ஊக்கமளிக்கப்பட்ட ஒரு அர்த்தமுள்ள செய்தியைப் பெறுங்கள்.
           </p>
           <div class="hero-actions">
-            <a class="primary-action" href="#welcome" data-i18n="heroPrimary">🙏 தரிசனம் காணுங்கள்</a>
-            <a class="secondary-action" href="#daily-prayer" data-i18n="heroSecondary">📖 இன்றைய பிரார்த்தனை</a>
+            <a class="primary-action" href="#answer" data-i18n="heroPrimary">🔱 Choose a Number</a>
+            <button class="secondary-action hero-answer-button" type="button" data-open-answer data-i18n="heroSecondary">🙏 Get Muruga Answer</button>
           </div>
         </div>
       </section>
 
-      <section class="section welcome-section" id="welcome" aria-labelledby="welcome-title">
-        <div class="content-split">
-          <div>
-            <div class="section-heading">
-              <p class="section-kicker" data-i18n="welcomeKicker">வரவேற்பு பகுதி</p>
-              <h2 id="welcome-title" data-i18n="welcomeTitle">வருக! முருகனின் அருள் உலகிற்கு</h2>
+      <section class="section welcome-home-section" id="welcome">
+        <div class="home-wrap welcome-home-card">
+          <p class="section-kicker">Welcome Section</p>
+          <h2>YourMuruga-க்கு வரவேற்கிறோம்</h2>
+          <p>
+            வாழ்க்கை என்பது எதிர்பாராத திருப்பங்கள், சவால்கள், வெற்றிகள், ஏமாற்றங்கள் மற்றும் நிச்சயமற்ற தருணங்கள் நிறைந்த ஒரு பயணம்.
+          </p>
+          <p>
+            சில நேரங்களில் நாம் நம்மீது வைத்திருக்கும் நம்பிக்கையை இழக்கிறோம். வேலை, தொழில், வியாபாரம், உறவுகள் மற்றும் வாழ்க்கையின் பாதை மீதான நம்பிக்கையும் குலைந்து போகலாம்.
+          </p>
+          <p>
+            அத்தகைய நேரங்களில்தான் நமக்கு வழிகாட்டுதல் மிகவும் தேவைப்படுகிறது.
+          </p>
+          <p>
+            YourMurugaAnswer உருவாக்கப்பட்டதன் நோக்கம் மிகவும் எளிமையானது, ஆனால் அதே நேரத்தில் மிகவும் ஆழமானது — மனிதர்கள் நம்பிக்கை, தன்னம்பிக்கை, துணிவு மற்றும் முருகப்பெருமானின் அருள்மிகு வழிகாட்டுதலை மீண்டும் கண்டுபிடிக்க உதவுவதற்காக.
+          </p>
+        </div>
+      </section>
+
+      <section class="section answer-section" id="answer">
+        <div class="home-wrap answer-layout">
+          <div class="answer-copy">
+            <p class="section-kicker">Muruga Answer</p>
+            <h2>🙏 முருகனின் அருள் செய்தி</h2>
+            <p>
+              கண்களை மூடி, உங்கள் மனதில் இருக்கும் கேள்வியை நினைத்து, முருகப்பெருமானை பிரார்த்தனை செய்து, 1 முதல் 100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்.
+            </p>
+          </div>
+          <form class="answer-box" id="main-message-form">
+            <label for="main-murugan-number">Enter number 1 - 100</label>
+            <div class="answer-controls">
+              <input id="main-murugan-number" name="mainMuruganNumber" type="number" min="1" max="100" inputmode="numeric" />
+              <button type="submit">அருள் செய்தி பெறுங்கள்</button>
             </div>
-            <p class="section-body" data-i18n="welcomeCopy">
-              தமிழர்களின் இதய தெய்வமாக விளங்கும் ஸ்ரீ முருகப் பெருமான், அறிவு, தைரியம், வெற்றி மற்றும் ஆன்மிக ஒளியின் வடிவமாக போற்றப்படுகிறார். இத்தளத்தின் மூலம் முருகனின் திருத்தலங்கள், பக்திப் பாடல்கள், பிரார்த்தனைகள் மற்றும் அரிய தகவல்களை அறிந்து கொள்ளலாம்.
-            </p>
-          </div>
-          <figure class="section-image">
-            <img src="assets/muruga-hero.png" alt="Blessing form of Lord Muruga with peacock" />
-          </figure>
+            <p class="message-error" id="main-message-error" aria-live="polite"></p>
+          </form>
         </div>
       </section>
 
-      <section class="section divine-section" aria-labelledby="quote-title">
-        <div class="content-split reverse">
-          <figure class="section-image dark-image">
-            <img src="assets/muruga-slide-2.png" alt="Lord Muruga in golden temple darshan" />
-          </figure>
-          <div class="devotional-card quote-card">
-            <p class="section-kicker" data-i18n="quoteKicker">தினசரி அருள்வாக்கு</p>
-            <h2 id="quote-title" data-i18n="quoteTitle">🌸 இன்றைய முருகன் அருள்வாக்கு</h2>
-            <blockquote data-i18n="quoteText">
-              "நம்பிக்கையுடன் என்னை நினைத்தால், பயம் விலகும்; பக்தியுடன் என்னை வணங்கினால், வெற்றி உன்னை தேடும்."
-            </blockquote>
-            <p class="quote-source" data-i18n="quoteSource">– ஸ்ரீ முருகப் பெருமான்</p>
+      <section class="section how-section" id="how-it-works">
+        <div class="home-wrap">
+          <p class="section-kicker">How It Works</p>
+          <h2>How Does YourMurugaAnswer Work?</h2>
+          <ol class="steps-list">
+            <li>கண்களை ஒரு நிமிடம் மூடுங்கள்</li>
+            <li>உங்கள் கேள்வி அல்லது பிரார்த்தனையை நினையுங்கள்</li>
+            <li>முருகனை மனதார வேண்டுங்கள்</li>
+            <li>1 முதல் 100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்</li>
+            <li>முருகன் அருள் செய்தியை பெறுங்கள்</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section purpose-section" id="purpose">
+        <div class="home-wrap two-column">
+          <div>
+            <p class="section-kicker">Purpose</p>
+            <h2>YourMurugaAnswer-ன் நோக்கம்</h2>
+          </div>
+          <p>
+            வாழ்க்கையில் தடுமாறுபவர்களுக்கு நம்பிக்கையையும், பலவீனமாக உணருபவர்களுக்கு தைரியத்தையும், தங்களைப் பற்றிய சந்தேகத்தில் இருப்பவர்களுக்கு தன்னம்பிக்கையையும் அளிப்பதற்காக இந்த தளம் உருவாக்கப்பட்டது.
+          </p>
+        </div>
+      </section>
+
+      <section class="section guidance-section" id="guidance">
+        <div class="home-wrap guidance-card">
+          <p class="section-kicker">Guidance, Not Prediction</p>
+          <h2>இது எதிர்காலத்தை கணிக்கும் கருவி அல்ல.</h2>
+          <p>
+            இது முருகப்பெருமானின் ஞானம், அருள் மற்றும் வாழ்க்கை வழிகாட்டுதலால் ஊக்கமளிக்கப்பட்ட ஆன்மீக வழிகாட்டுதல் தளம்.
+          </p>
+        </div>
+      </section>
+
+      <section class="section miracles-section" id="miracles">
+        <div class="home-wrap">
+          <p class="section-kicker">Murugan Miracles</p>
+          <h2>முருகன் அருளின் அற்புதங்கள்</h2>
+          <div class="miracle-grid">
+            <article>கஷ்ட நேரங்களில் துணிச்சல்</article>
+            <article>தெய்வீக பாதுகாப்பு</article>
+            <article>மன அமைதி</article>
+            <article>மாற்றத்தின் அற்புதம்</article>
+            <article>வழிகாட்டும் அருள்</article>
           </div>
         </div>
       </section>
 
-      <section class="section prayer-section" id="daily-prayer" aria-labelledby="prayer-title">
-        <div class="content-split">
-          <div class="devotional-card prayer-card">
-            <p class="section-kicker" data-i18n="prayerKicker">தினசரி பிரார்த்தனை பகுதி</p>
-            <h2 id="prayer-title" data-i18n="dailyPrayerTitle">🙏 இன்றைய பிரார்த்தனை</h2>
-            <p data-i18n="dailyPrayerText">
-              ஓம் சரவணபவா! என் மனதில் உள்ள குழப்பங்களை நீக்கி, நல்ல எண்ணங்களையும், தைரியத்தையும், வெற்றியையும் அருள்வாயாக.
-            </p>
-          </div>
-          <figure class="section-image prayer-image">
-            <img src="assets/muruga-hero.png" alt="Lord Muruga child form with vel and peacock" />
-          </figure>
+      <section class="section trust-section" id="trust">
+        <div class="home-wrap trust-card">
+          <p>முருகனை நம்புங்கள்...</p>
+          <p>உங்களையும் நம்புங்கள்...</p>
+          <ul>
+            <li>பயத்தை விட தைரியம் பெரியது.</li>
+            <li>குழப்பத்தை விட ஞானம் உயர்ந்தது.</li>
+            <li>தோல்வியை விட விடாமுயற்சி வலிமையானது.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section prayer-section" id="daily-prayer">
+        <div class="home-wrap prayer-card">
+          <p class="section-kicker">Prayer</p>
+          <h2>வேலவா முருகா!</h2>
+          <p>
+            நான் குழப்பத்தில் இருக்கும்போது எனக்கு வழிகாட்டு.<br />
+            நான் பலவீனமாக இருக்கும்போது எனக்கு வலிமை கொடு.<br />
+            நான் பயப்படும் நேரங்களில் என்னைக் காப்பாற்று.<br />
+            ஓம் சரவணபவா!
+          </p>
+        </div>
+      </section>
+
+      <section class="section final-cta-section" id="final-answer">
+        <div class="home-wrap final-cta-card">
+          <p>
+            ஒரு எண்ணை தேர்ந்தெடுங்கள்.<br />
+            ஒரு செய்தியைப் பெறுங்கள்.<br />
+            முருகனை நம்புங்கள்.<br />
+            உங்களை நம்புங்கள்.<br />
+            முன்னேறிக்கொண்டே இருங்கள்.
+          </p>
+          <button class="primary-action" type="button" data-open-answer>🔱 Get My Muruga Answer</button>
         </div>
       </section>
     </main>
 
     <div class="devotion-popup" id="devotion-popup" aria-hidden="true">
-      <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <div class="popup-card guidance-popup-card" role="dialog" aria-modal="true" aria-labelledby="popup-title">
         <button class="popup-close" type="button" aria-label="Close message">×</button>
-        <p class="section-kicker" data-i18n="popupKicker">முருகன் அருள்</p>
-        <h2 id="popup-title" data-i18n="popupTitle">ஓம் சரவண பவ</h2>
+        <p class="section-kicker" data-i18n="popupKicker">Muruga Answer</p>
+        <h2 id="popup-title" data-i18n="popupTitle">இன்று முருகன் உங்களுக்கு சொல்லும் செய்தி</h2>
+        <p class="popup-symbols" aria-hidden="true">🙏 🔱 🙏</p>
         <p data-i18n="popupText">
-          முருகனின் அருள் உங்கள் இல்லத்திலும் இதயத்திலும் அமைதியை தரட்டும்.
+          கண்களை ஒரு நிமிடம் மூடுங்கள்.
+          முருகப்பெருமானை மனதில் நினைத்து பிரார்த்தனை செய்யுங்கள்.
+          1 முதல் 100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்.
+          உங்களுக்கு ஒரு அர்த்தமுள்ள ஊக்கமளிக்கும் செய்தி கிடைக்கும்.
         </p>
         <form class="message-form" id="murugan-message-form">
-          <label for="murugan-number" data-i18n="popupInputLabel">1 முதல் 10 வரை ஒரு எண்ணைத் தேர்வு செய்யுங்கள்</label>
+          <label for="murugan-number" data-i18n="popupInputLabel">Number Input</label>
           <div class="message-controls">
             <input id="murugan-number" name="muruganNumber" type="number" min="1" max="100" inputmode="numeric" />
-            <button type="submit" data-i18n="popupButton">அருள்வாக்கு காண்க</button>
+            <button type="submit" data-i18n="popupButton">Get Muruga Answer</button>
           </div>
         </form>
         <p class="message-error" id="message-error" data-i18n="popupError" aria-live="polite"></p>
