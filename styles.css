@@ -211,7 +211,7 @@ body.lang-ta {
   background:
     radial-gradient(circle, rgba(255, 244, 210, 0.34) 0%, rgba(242, 193, 78, 0.16) 58%, rgba(255, 248, 240, 0.08) 100%),
     rgba(255, 248, 240, 0.18);
-  border: 2px solid rgba(242, 193, 78, 0.42);
+  border: 0;
   box-shadow:
     0 0 0 4px rgba(255, 248, 240, 0.08),
     0 10px 28px rgba(3, 20, 32, 0.34),
