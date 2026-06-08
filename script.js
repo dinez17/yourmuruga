@@ -157,6 +157,7 @@ const mainMuruganNumberInput = document.querySelector("#main-murugan-number");
 const mainMessageError = document.querySelector("#main-message-error");
 const answerOpenButtons = document.querySelectorAll("[data-open-answer]");
 const arupadaiAccordions = document.querySelectorAll(".arupadai-accordion details");
+const miracleAccordions = document.querySelectorAll(".miracle-accordion details");
 const themeNames = [
   "divine",
   "vel",
@@ -368,6 +369,20 @@ arupadaiAccordions.forEach((accordion) => {
     }
 
     arupadaiAccordions.forEach((otherAccordion) => {
+      if (otherAccordion !== accordion) {
+        otherAccordion.open = false;
+      }
+    });
+  });
+});
+
+miracleAccordions.forEach((accordion) => {
+  accordion.addEventListener("toggle", () => {
+    if (!accordion.open) {
+      return;
+    }
+
+    miracleAccordions.forEach((otherAccordion) => {
       if (otherAccordion !== accordion) {
         otherAccordion.open = false;
       }

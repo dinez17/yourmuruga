@@ -418,13 +418,6 @@ body.lang-ta .hero-copy {
   white-space: normal;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 26px;
-}
-
 .primary-action,
 .secondary-action {
   display: inline-flex;
@@ -703,12 +696,12 @@ body.lang-ta .hero-copy {
 }
 
 .welcome-image {
-  width: min(100%, 360px);
+  width: min(100%, 280px);
   justify-self: center;
   align-self: center;
   display: grid;
   place-items: center;
-  min-height: 430px;
+  min-height: 340px;
   overflow: hidden;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.26);
@@ -995,24 +988,86 @@ body.lang-ta .hero-copy {
   color: rgba(255, 248, 240, 0.88);
 }
 
-.miracle-grid {
+.miracle-wrap {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 24px;
+  gap: 22px;
 }
 
-.miracle-grid article {
-  min-height: 118px;
+.miracle-intro {
+  max-width: 980px;
+}
+
+.miracle-intro h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(22px, 2.3vw, 32px);
+  line-height: 1.25;
+}
+
+.miracle-intro p {
+  margin: 14px 0 0;
+  color: #315260;
+  font-size: clamp(14px, 1.12vw, 16px);
+  line-height: 1.8;
+}
+
+.miracle-accordion {
+  display: grid;
+  gap: 12px;
+}
+
+.miracle-accordion details {
   border: 1px solid rgba(7, 27, 36, 0.14);
+  border-left: 5px solid var(--gold);
   border-radius: 8px;
-  padding: 20px;
-  color: var(--peacock-neck);
   background: rgba(255, 255, 255, 0.76);
   box-shadow: 0 14px 36px rgba(3, 55, 76, 0.1);
-  font-size: 14px;
+  overflow: hidden;
+}
+
+.miracle-accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 58px;
+  padding: 16px 18px;
+  color: var(--peacock-neck);
+  font-size: clamp(14px, 1.1vw, 16px);
   font-weight: 800;
   line-height: 1.5;
+  cursor: pointer;
+  list-style: none;
+}
+
+.miracle-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.miracle-accordion summary::after {
+  content: "+";
+  display: grid;
+  place-items: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  color: #05202b;
+  background: var(--gold);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.miracle-accordion details[open] summary::after {
+  content: "-";
+}
+
+.miracle-accordion p {
+  margin: 0;
+  padding: 0 18px 18px;
+  color: #315260;
+  font-size: clamp(13px, 1.05vw, 15px);
+  line-height: 1.75;
 }
 
 .trust-card,
@@ -1583,10 +1638,6 @@ body.lang-ta .hero-copy {
   }
 
   .steps-list,
-  .miracle-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .section-image {
     min-height: 260px;
   }
@@ -1635,8 +1686,8 @@ body.lang-ta .hero-copy {
   }
 
   .welcome-image {
-    width: min(100%, 320px);
-    min-height: 380px;
+    width: min(100%, 260px);
+    min-height: 320px;
   }
 
   .lang-button {
@@ -1729,12 +1780,7 @@ body.lang-ta .hero-copy {
 
   .answer-controls,
   .steps-list,
-  .miracle-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .steps-list li,
-  .miracle-grid article {
+  .steps-list li {
     min-height: auto;
   }
 
