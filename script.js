@@ -122,7 +122,7 @@ Object.assign(translations.ta, {
 });
 
 Object.assign(translations.en, {
-  popupKicker: "Muruga Guidance",
+  popupKicker: "Your Muruga Guidance",
   popupTitle: "Receive Muruga's Answer",
   popupText:
     "Close your eyes and think deeply about the situation that is on your mind.\nOffer your question to Lord Muruga with faith and sincerity.\nNow, ask Muruga to guide you towards a number between 1 and 100.\nThe number that naturally appears in your mind is not a coincidence.\nThat number carries Lord Muruga's message and guidance for you.\nYour Question... Your Faith... Muruga's Answer.",
@@ -140,7 +140,7 @@ Object.assign(translations.ta, {
 });
 
 const languageButtons = document.querySelectorAll(".lang-button");
-const themeButtons = document.querySelectorAll(".theme-button");
+const themeSelect = document.querySelector("#theme-select");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
 const languageContentNodes = document.querySelectorAll("[data-content-lang]");
 const devotionPopup = document.querySelector("#devotion-popup");
@@ -156,7 +156,22 @@ const mainMessageForm = document.querySelector("#main-message-form");
 const mainMuruganNumberInput = document.querySelector("#main-murugan-number");
 const mainMessageError = document.querySelector("#main-message-error");
 const answerOpenButtons = document.querySelectorAll("[data-open-answer]");
-const themeNames = ["peacock", "copper", "sandal", "royal"];
+const themeNames = [
+  "peacock",
+  "copper",
+  "sandal",
+  "royal",
+  "maroon",
+  "emerald",
+  "sunrise",
+  "lotus",
+  "ocean",
+  "forest",
+  "ruby",
+  "amethyst",
+  "charcoal",
+  "ivory"
+];
 
 const muruganMessages = [
   "ஒவ்வொரு காலையும் ஒரு புதிய வாய்ப்பைத் தருகிறது. இன்று நீங்கள் எடுக்கும் சிறிய ஒரு முன்னேற்ற அடியும் நாளைய பெரிய வெற்றிக்கான அடித்தளமாக மாறலாம். உங்களை மற்றவர்களுடன் ஒப்பிட வேண்டாம்; உங்கள் பயணம் தனித்துவமானது.\n மெதுவாக நடந்தாலும் பரவாயில்லை; நின்றுவிடாமல் இருப்பதே உண்மையான வெற்றி.",
@@ -262,13 +277,13 @@ const muruganMessages = [
 ];
 
 Object.assign(translations.en, {
-  popupKicker: "Murugan's Grace",
+  popupKicker: "Your Murugan's Grace",
   popupTitle: "Om Saravana Bhava",
   popupText: "May Lord Murugan's grace bring peace to your home and heart.",
   popupInputLabel: "Choose a number from 1 to 10",
   popupButton: "Show Message",
   popupError: "",
-  messagePopupKicker: "Murugan's Message",
+  messagePopupKicker: "Your Murugan's Message",
   messagePopupTitle: "A Grace Message For You"
 });
 
@@ -284,7 +299,7 @@ Object.assign(translations.ta, {
 });
 
 Object.assign(translations.en, {
-  popupKicker: "Muruga Guidance",
+  popupKicker: "Your Muruga Guidance",
   popupTitle: "Receive Muruga's Answer",
   popupText:
     "Close your eyes and think deeply about the situation that is on your mind.\nOffer your question to Lord Muruga with faith and sincerity.\nNow, ask Muruga to guide you towards a number between 1 and 100.\nThe number that naturally appears in your mind is not a coincidence.\nThat number carries Lord Muruga's message and guidance for you.\nYour Question... Your Faith... Muruga's Answer.",
@@ -306,14 +321,14 @@ Object.assign(translations.en, {
     "During life's challenges, confusion, and important decisions, receive a meaningful message inspired by Lord Muruga's wisdom.",
   heroPrimary: "🔱 Choose a Number",
   heroSecondary: "🙏 Get YourMuruga Answer",
-  popupKicker: "Muruga Answer",
+  popupKicker: "Your Muruga Answer",
   popupTitle: "Today Muruga's Message For You",
   popupText:
     "Close your eyes for one minute.\nPray to Lord Muruga in your heart.\nChoose a number from 1 to 100.\nYou will receive a meaningful and encouraging message.",
   popupInputLabel: "Number Input",
   popupButton: "Get Your Muruga Answer",
   popupLoading: "Receiving Muruga's grace message...",
-  messagePopupKicker: "Muruga Answer",
+  messagePopupKicker: "Your Muruga Answer",
   messagePopupTitle: "A Grace Message For You"
 });
 
@@ -324,7 +339,7 @@ Object.assign(translations.ta, {
     "வாழ்க்கையின் சவால்கள், குழப்பங்கள் மற்றும் முக்கியமான முடிவுகளின் நேரங்களில், முருகப்பெருமானின் ஞானத்தால் ஊக்கமளிக்கப்பட்ட ஒரு அர்த்தமுள்ள செய்தியைப் பெறுங்கள்.",
   heroPrimary: "🔱 Choose a Number",
   heroSecondary: "🙏 Get Your Muruga Answer",
-  popupKicker: "Muruga Answer",
+  popupKicker: "Your Muruga Answer",
   popupTitle: "இன்று முருகன் உங்களுக்கு சொல்லும் செய்தி",
   popupText:
     "கண்களை ஒரு நிமிடம் மூடுங்கள்.\nமுருகப்பெருமானை மனதில் நினைத்து பிரார்த்தனை செய்யுங்கள்.\n1 முதல் 100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்.\nஉங்களுக்கு ஒரு அர்த்தமுள்ள ஊக்கமளிக்கும் செய்தி கிடைக்கும்.",
@@ -342,18 +357,14 @@ function setTheme(theme) {
     document.body.classList.toggle(`theme-${themeName}`, themeName === selectedTheme);
   });
 
-  themeButtons.forEach((button) => {
-    const isActive = button.dataset.theme === selectedTheme;
-    button.classList.toggle("active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
-  });
+  if (themeSelect) {
+    themeSelect.value = selectedTheme;
+  }
 
   localStorage.setItem("yourMurugaTheme", selectedTheme);
 }
 
-themeButtons.forEach((button) => {
-  button.addEventListener("click", () => setTheme(button.dataset.theme));
-});
+themeSelect?.addEventListener("change", () => setTheme(themeSelect.value));
 
 setTheme(localStorage.getItem("yourMurugaTheme") || "peacock");
 

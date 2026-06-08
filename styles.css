@@ -101,6 +101,246 @@ body.theme-royal {
   --hero-overlay-bg: linear-gradient(90deg, rgba(16, 26, 56, 0.58) 0%, rgba(16, 26, 56, 0.2) 23%, transparent 38%);
 }
 
+body.theme-maroon {
+  --ink: #20110f;
+  --muted: #684d47;
+  --peacock-blue: #7f1f1d;
+  --peacock-teal: #a8322b;
+  --peacock-green: #806a25;
+  --peacock-neck: #581714;
+  --peacock-deep: #2d0d0b;
+  --gold: #efbd55;
+  --paper: #fff1e6;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(239, 189, 85, 0.26), transparent 30%),
+    radial-gradient(circle at 86% 16%, rgba(128, 106, 37, 0.14), transparent 30%),
+    linear-gradient(135deg, #fff1e6 0%, #f8ddd6 52%, #f5efd8 100%);
+  --header-bg: rgba(88, 23, 20, 0.95);
+  --brand-gradient: linear-gradient(145deg, #efbd55, #a8322b, #806a25);
+  --button-gradient: linear-gradient(135deg, #efbd55, #ffe2a2);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(168, 50, 43, 0.13), transparent 26%),
+    linear-gradient(135deg, rgba(255, 241, 230, 0.98), rgba(247, 239, 218, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(88, 23, 20, 0.96), rgba(127, 31, 29, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(45, 13, 11, 0.6) 0%, rgba(45, 13, 11, 0.22) 23%, transparent 38%);
+}
+
+body.theme-emerald {
+  --ink: #071f1a;
+  --muted: #3f6b60;
+  --peacock-blue: #00666d;
+  --peacock-teal: #00856f;
+  --peacock-green: #24a45d;
+  --peacock-neck: #06473d;
+  --peacock-deep: #042923;
+  --gold: #e8bd4a;
+  --paper: #effbf2;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(232, 189, 74, 0.24), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(36, 164, 93, 0.17), transparent 32%),
+    linear-gradient(135deg, #effbf2 0%, #e5f6ef 54%, #fff6dc 100%);
+  --header-bg: rgba(6, 71, 61, 0.95);
+  --brand-gradient: linear-gradient(145deg, #e8bd4a, #00856f, #24a45d);
+  --button-gradient: linear-gradient(135deg, #e8bd4a, #ffdf89);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(36, 164, 93, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(239, 251, 242, 0.98), rgba(255, 248, 226, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(6, 71, 61, 0.96), rgba(0, 102, 109, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(4, 41, 35, 0.58) 0%, rgba(4, 41, 35, 0.2) 23%, transparent 38%);
+}
+
+body.theme-sunrise {
+  --ink: #251509;
+  --muted: #74583f;
+  --peacock-blue: #a74d22;
+  --peacock-teal: #cf6f2c;
+  --peacock-green: #6a8a3a;
+  --peacock-neck: #6f2d16;
+  --peacock-deep: #3a170b;
+  --gold: #f4bd43;
+  --paper: #fff2df;
+  --page-bg:
+    radial-gradient(circle at 16% 8%, rgba(244, 189, 67, 0.3), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(106, 138, 58, 0.14), transparent 32%),
+    linear-gradient(135deg, #fff2df 0%, #ffe0c7 50%, #eef3dd 100%);
+  --header-bg: rgba(111, 45, 22, 0.95);
+  --brand-gradient: linear-gradient(145deg, #f4bd43, #cf6f2c, #6a8a3a);
+  --button-gradient: linear-gradient(135deg, #f4bd43, #ffe08a);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(207, 111, 44, 0.13), transparent 26%),
+    linear-gradient(135deg, rgba(255, 242, 223, 0.98), rgba(241, 248, 224, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(111, 45, 22, 0.96), rgba(167, 77, 34, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(58, 23, 11, 0.58) 0%, rgba(58, 23, 11, 0.2) 23%, transparent 38%);
+}
+
+body.theme-lotus {
+  --ink: #211320;
+  --muted: #704f6c;
+  --peacock-blue: #7c3f86;
+  --peacock-teal: #b34b83;
+  --peacock-green: #667d3a;
+  --peacock-neck: #53245b;
+  --peacock-deep: #2f1533;
+  --gold: #edbf59;
+  --paper: #fff0f7;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(237, 191, 89, 0.24), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(179, 75, 131, 0.14), transparent 32%),
+    linear-gradient(135deg, #fff0f7 0%, #f6e9ff 50%, #f5f0dc 100%);
+  --header-bg: rgba(83, 36, 91, 0.95);
+  --brand-gradient: linear-gradient(145deg, #edbf59, #b34b83, #667d3a);
+  --button-gradient: linear-gradient(135deg, #edbf59, #ffe1a0);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(179, 75, 131, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(255, 240, 247, 0.98), rgba(246, 240, 220, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(83, 36, 91, 0.96), rgba(124, 63, 134, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(47, 21, 51, 0.58) 0%, rgba(47, 21, 51, 0.2) 23%, transparent 38%);
+}
+
+body.theme-ocean {
+  --ink: #071925;
+  --muted: #486879;
+  --peacock-blue: #005d8f;
+  --peacock-teal: #008fa3;
+  --peacock-green: #2f9f88;
+  --peacock-neck: #063b62;
+  --peacock-deep: #03263e;
+  --gold: #e9bd4d;
+  --paper: #eefaff;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(233, 189, 77, 0.22), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(0, 143, 163, 0.17), transparent 32%),
+    linear-gradient(135deg, #eefaff 0%, #e7f2ff 50%, #fff5dc 100%);
+  --header-bg: rgba(6, 59, 98, 0.95);
+  --brand-gradient: linear-gradient(145deg, #e9bd4d, #005d8f, #2f9f88);
+  --button-gradient: linear-gradient(135deg, #e9bd4d, #ffe08e);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(0, 143, 163, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(238, 250, 255, 0.98), rgba(255, 247, 226, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(6, 59, 98, 0.96), rgba(0, 93, 143, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(3, 38, 62, 0.58) 0%, rgba(3, 38, 62, 0.2) 23%, transparent 38%);
+}
+
+body.theme-forest {
+  --ink: #101d12;
+  --muted: #52684e;
+  --peacock-blue: #2d694c;
+  --peacock-teal: #4c873f;
+  --peacock-green: #7b9436;
+  --peacock-neck: #26462b;
+  --peacock-deep: #172b1b;
+  --gold: #d9b34a;
+  --paper: #f4fae9;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(217, 179, 74, 0.24), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(76, 135, 63, 0.16), transparent 32%),
+    linear-gradient(135deg, #f4fae9 0%, #e7f3df 50%, #fff4db 100%);
+  --header-bg: rgba(38, 70, 43, 0.95);
+  --brand-gradient: linear-gradient(145deg, #d9b34a, #4c873f, #2d694c);
+  --button-gradient: linear-gradient(135deg, #d9b34a, #ffe195);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(76, 135, 63, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(244, 250, 233, 0.98), rgba(255, 246, 224, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(38, 70, 43, 0.96), rgba(45, 105, 76, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(23, 43, 27, 0.58) 0%, rgba(23, 43, 27, 0.2) 23%, transparent 38%);
+}
+
+body.theme-ruby {
+  --ink: #221016;
+  --muted: #704b55;
+  --peacock-blue: #842438;
+  --peacock-teal: #b12d48;
+  --peacock-green: #735f2c;
+  --peacock-neck: #5c1828;
+  --peacock-deep: #310d15;
+  --gold: #efc15a;
+  --paper: #fff0f2;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(239, 193, 90, 0.24), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(177, 45, 72, 0.14), transparent 32%),
+    linear-gradient(135deg, #fff0f2 0%, #f8dde4 50%, #f5efdb 100%);
+  --header-bg: rgba(92, 24, 40, 0.95);
+  --brand-gradient: linear-gradient(145deg, #efc15a, #b12d48, #735f2c);
+  --button-gradient: linear-gradient(135deg, #efc15a, #ffe2a2);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(177, 45, 72, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(255, 240, 242, 0.98), rgba(247, 240, 220, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(92, 24, 40, 0.96), rgba(132, 36, 56, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(49, 13, 21, 0.58) 0%, rgba(49, 13, 21, 0.2) 23%, transparent 38%);
+}
+
+body.theme-amethyst {
+  --ink: #171426;
+  --muted: #5d5772;
+  --peacock-blue: #49347f;
+  --peacock-teal: #6d4aa4;
+  --peacock-green: #5f7d70;
+  --peacock-neck: #33255f;
+  --peacock-deep: #1d1638;
+  --gold: #e7bd58;
+  --paper: #f7f0ff;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(231, 189, 88, 0.22), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(109, 74, 164, 0.15), transparent 32%),
+    linear-gradient(135deg, #f7f0ff 0%, #ececff 50%, #edf7f2 100%);
+  --header-bg: rgba(51, 37, 95, 0.95);
+  --brand-gradient: linear-gradient(145deg, #e7bd58, #6d4aa4, #5f7d70);
+  --button-gradient: linear-gradient(135deg, #e7bd58, #ffe3a0);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(109, 74, 164, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(247, 240, 255, 0.98), rgba(239, 248, 243, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(51, 37, 95, 0.96), rgba(73, 52, 127, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(29, 22, 56, 0.58) 0%, rgba(29, 22, 56, 0.2) 23%, transparent 38%);
+}
+
+body.theme-charcoal {
+  --ink: #101820;
+  --muted: #53616d;
+  --peacock-blue: #27394a;
+  --peacock-teal: #3f6f78;
+  --peacock-green: #87723c;
+  --peacock-neck: #1c2a36;
+  --peacock-deep: #111b23;
+  --gold: #ddb85c;
+  --paper: #f2f5f2;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(221, 184, 92, 0.22), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(63, 111, 120, 0.14), transparent 32%),
+    linear-gradient(135deg, #f2f5f2 0%, #e6edf0 50%, #fff4dc 100%);
+  --header-bg: rgba(28, 42, 54, 0.95);
+  --brand-gradient: linear-gradient(145deg, #ddb85c, #3f6f78, #87723c);
+  --button-gradient: linear-gradient(135deg, #ddb85c, #ffe3a2);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(63, 111, 120, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(242, 245, 242, 0.98), rgba(255, 247, 226, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(28, 42, 54, 0.96), rgba(39, 57, 74, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(17, 27, 35, 0.58) 0%, rgba(17, 27, 35, 0.2) 23%, transparent 38%);
+}
+
+body.theme-ivory {
+  --ink: #1e2016;
+  --muted: #666b50;
+  --peacock-blue: #6b6f3b;
+  --peacock-teal: #9a7f36;
+  --peacock-green: #43806c;
+  --peacock-neck: #4f5530;
+  --peacock-deep: #2f321d;
+  --gold: #d6a940;
+  --paper: #fffbea;
+  --page-bg:
+    radial-gradient(circle at 14% 8%, rgba(214, 169, 64, 0.24), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(67, 128, 108, 0.14), transparent 32%),
+    linear-gradient(135deg, #fffbea 0%, #f2efd8 50%, #e6f4ef 100%);
+  --header-bg: rgba(79, 85, 48, 0.95);
+  --brand-gradient: linear-gradient(145deg, #d6a940, #43806c, #9a7f36);
+  --button-gradient: linear-gradient(135deg, #d6a940, #ffe39a);
+  --soft-section-bg:
+    radial-gradient(circle at 12% 8%, rgba(154, 127, 54, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(255, 251, 234, 0.98), rgba(232, 246, 241, 0.94));
+  --dark-section-bg: linear-gradient(135deg, rgba(79, 85, 48, 0.96), rgba(67, 128, 108, 0.92));
+  --hero-overlay-bg: linear-gradient(90deg, rgba(47, 50, 29, 0.58) 0%, rgba(47, 50, 29, 0.2) 23%, transparent 38%);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -210,43 +450,28 @@ body.lang-ta {
 .theme-switch {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px;
+  gap: 8px;
+  padding: 4px 5px 4px 10px;
   border: 1px solid rgba(255, 248, 240, 0.2);
   border-radius: 999px;
   background: rgba(255, 248, 240, 0.14);
+  color: #fff8f0;
+  font-size: 12px;
+  font-weight: 800;
 }
 
-.theme-button {
-  width: 26px;
-  height: 26px;
-  border: 2px solid transparent;
-  border-radius: 50%;
+.theme-select {
+  min-width: 128px;
+  height: 32px;
+  border: 0;
+  border-radius: 999px;
+  color: #05202b;
+  background: var(--gold);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
   cursor: pointer;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
-}
-
-.theme-button.active {
-  border-color: var(--gold);
-  box-shadow:
-    0 0 0 2px rgba(255, 248, 240, 0.26),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.36);
-}
-
-.theme-button[data-theme="peacock"] {
-  background: linear-gradient(135deg, #052f57 0 48%, #009b72 48% 72%, #f2c14e 72%);
-}
-
-.theme-button[data-theme="copper"] {
-  background: linear-gradient(135deg, #5b2416 0 48%, #cb5a35 48% 72%, #f4c35b 72%);
-}
-
-.theme-button[data-theme="sandal"] {
-  background: linear-gradient(135deg, #fff7e8 0 42%, #1c8a72 42% 70%, #dca642 70%);
-}
-
-.theme-button[data-theme="royal"] {
-  background: linear-gradient(135deg, #101a38 0 48%, #8b2f5f 48% 72%, #f0bf4f 72%);
+  padding: 0 28px 0 12px;
 }
 
 .lang-button {
@@ -1349,13 +1574,14 @@ body.lang-ta .hero-copy {
   }
 
   .theme-switch {
-    gap: 4px;
-    padding: 4px;
+    gap: 6px;
+    padding: 4px 5px 4px 9px;
   }
 
-  .theme-button {
-    width: 22px;
-    height: 22px;
+  .theme-select {
+    min-width: 116px;
+    height: 30px;
+    font-size: 11px;
   }
 
   .brand small {
