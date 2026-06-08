@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="lang-ta">
+  <body class="lang-ta theme-peacock">
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Your Muruga home">
         <span class="brand-mark">வேல்</span>
@@ -26,9 +26,18 @@
         </span>
       </a>
 
-      <div class="language-switch" aria-label="Language">
-        <button class="lang-button" type="button" data-lang="en">EN</button>
-        <button class="lang-button active" type="button" data-lang="ta">தமிழ்</button>
+      <div class="header-actions">
+        <div class="theme-switch" aria-label="Theme colour">
+          <button class="theme-button active" type="button" data-theme="peacock" aria-label="Peacock theme" title="Peacock"></button>
+          <button class="theme-button" type="button" data-theme="copper" aria-label="Copper theme" title="Copper"></button>
+          <button class="theme-button" type="button" data-theme="sandal" aria-label="Sandal theme" title="Sandal"></button>
+          <button class="theme-button" type="button" data-theme="royal" aria-label="Royal theme" title="Royal"></button>
+        </div>
+
+        <div class="language-switch" aria-label="Language">
+          <button class="lang-button" type="button" data-lang="en">EN</button>
+          <button class="lang-button active" type="button" data-lang="ta">தமிழ்</button>
+        </div>
       </div>
     </header>
 
@@ -50,7 +59,7 @@
           </p>
           <div class="hero-actions">
             <a class="primary-action" href="#answer" data-i18n="heroPrimary">🔱 Choose a Number</a>
-            <button class="secondary-action hero-answer-button" type="button" data-open-answer data-i18n="heroSecondary">🙏 Get Muruga Answer</button>
+            <button class="secondary-action hero-answer-button" type="button" data-open-answer data-i18n="heroSecondary">🙏 Get Your Muruga Answer</button>
           </div>
         </div>
       </section>
@@ -80,7 +89,7 @@
             <p class="section-kicker">Muruga Answer</p>
             <h2>🙏 முருகனின் அருள் செய்தி</h2>
             <p>
-              கண்களை மூடி, உங்கள் மனதில் இருக்கும் கேள்வியை நினைத்து, முருகப்பெருமானை பிரார்த்தனை செய்து, 1 முதல் 100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்.
+                உங்கள் மனதில் உள்ள கவலையை நினைத்துக்கொள்ளுங்கள்... கண்களை மூடி முருகனை நினைத்து 1 முதல் 100க்குள் ஒரு எண்ணை கேளுங்கள்... இப்போது மனதில் தோன்றும் எண்ணை பாருங்கள்... அதுவே உங்களுக்கான முருகனின் பதில்! 🙏   
             </p>
           </div>
           <form class="answer-box" id="main-message-form">
@@ -178,7 +187,7 @@
             உங்களை நம்புங்கள்.<br />
             முன்னேறிக்கொண்டே இருங்கள்.
           </p>
-          <button class="primary-action" type="button" data-open-answer>🔱 Get My Muruga Answer</button>
+          <button class="primary-action" type="button" data-open-answer>Get Your Muruga Answer</button>
         </div>
       </section>
     </main>
@@ -186,9 +195,9 @@
     <div class="devotion-popup" id="devotion-popup" aria-hidden="true">
       <div class="popup-card guidance-popup-card" role="dialog" aria-modal="true" aria-labelledby="popup-title">
         <button class="popup-close" type="button" aria-label="Close message">×</button>
-        <p class="section-kicker" data-i18n="popupKicker">Muruga Answer</p>
+        <p class="section-kicker" data-i18n="popupKicker">Your Muruga Answer</p>
         <h2 id="popup-title" data-i18n="popupTitle">இன்று முருகன் உங்களுக்கு சொல்லும் செய்தி</h2>
-        <p class="popup-symbols" aria-hidden="true">🙏 🔱 🙏</p>
+        <p class="popup-symbols" aria-hidden="true">🙏 🙏 🙏</p>
         <p data-i18n="popupText">
           கண்களை ஒரு நிமிடம் மூடுங்கள்.
           முருகப்பெருமானை மனதில் நினைத்து பிரார்த்தனை செய்யுங்கள்.
@@ -199,7 +208,7 @@
           <label for="murugan-number" data-i18n="popupInputLabel">Number Input</label>
           <div class="message-controls">
             <input id="murugan-number" name="muruganNumber" type="number" min="1" max="100" inputmode="numeric" />
-            <button type="submit" data-i18n="popupButton">Get Muruga Answer</button>
+            <button type="submit" data-i18n="popupButton">Get Your Muruga Answer</button>
           </div>
         </form>
         <p class="message-error" id="message-error" data-i18n="popupError" aria-live="polite"></p>

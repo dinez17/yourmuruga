@@ -140,6 +140,7 @@ Object.assign(translations.ta, {
 });
 
 const languageButtons = document.querySelectorAll(".lang-button");
+const themeButtons = document.querySelectorAll(".theme-button");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
 const languageContentNodes = document.querySelectorAll("[data-content-lang]");
 const devotionPopup = document.querySelector("#devotion-popup");
@@ -155,6 +156,7 @@ const mainMessageForm = document.querySelector("#main-message-form");
 const mainMuruganNumberInput = document.querySelector("#main-murugan-number");
 const mainMessageError = document.querySelector("#main-message-error");
 const answerOpenButtons = document.querySelectorAll("[data-open-answer]");
+const themeNames = ["peacock", "copper", "sandal", "royal"];
 
 const muruganMessages = [
   "ஒவ்வொரு காலையும் ஒரு புதிய வாய்ப்பைத் தருகிறது. இன்று நீங்கள் எடுக்கும் சிறிய ஒரு முன்னேற்ற அடியும் நாளைய பெரிய வெற்றிக்கான அடித்தளமாக மாறலாம். உங்களை மற்றவர்களுடன் ஒப்பிட வேண்டாம்; உங்கள் பயணம் தனித்துவமானது.\n மெதுவாக நடந்தாலும் பரவாயில்லை; நின்றுவிடாமல் இருப்பதே உண்மையான வெற்றி.",
@@ -332,6 +334,28 @@ Object.assign(translations.ta, {
   messagePopupKicker: "முருகன் அருள் செய்தி",
   messagePopupTitle: "உங்களுக்கான அருள் செய்தி"
 });
+
+function setTheme(theme) {
+  const selectedTheme = themeNames.includes(theme) ? theme : "peacock";
+
+  themeNames.forEach((themeName) => {
+    document.body.classList.toggle(`theme-${themeName}`, themeName === selectedTheme);
+  });
+
+  themeButtons.forEach((button) => {
+    const isActive = button.dataset.theme === selectedTheme;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  localStorage.setItem("yourMurugaTheme", selectedTheme);
+}
+
+themeButtons.forEach((button) => {
+  button.addEventListener("click", () => setTheme(button.dataset.theme));
+});
+
+setTheme(localStorage.getItem("yourMurugaTheme") || "peacock");
 
 function setLanguage(language) {
   document.documentElement.lang = language === "ta" ? "ta" : "en";
