@@ -157,20 +157,12 @@ const mainMuruganNumberInput = document.querySelector("#main-murugan-number");
 const mainMessageError = document.querySelector("#main-message-error");
 const answerOpenButtons = document.querySelectorAll("[data-open-answer]");
 const themeNames = [
+  "divine",
+  "vel",
   "peacock",
-  "copper",
-  "sandal",
-  "royal",
-  "maroon",
-  "emerald",
-  "sunrise",
-  "lotus",
-  "ocean",
-  "forest",
-  "ruby",
-  "amethyst",
-  "charcoal",
-  "ivory"
+  "kumkum",
+  "celestial",
+  "pure"
 ];
 
 const muruganMessages = [
@@ -351,7 +343,7 @@ Object.assign(translations.ta, {
 });
 
 function setTheme(theme) {
-  const selectedTheme = themeNames.includes(theme) ? theme : "peacock";
+  const selectedTheme = themeNames.includes(theme) ? theme : "divine";
 
   themeNames.forEach((themeName) => {
     document.body.classList.toggle(`theme-${themeName}`, themeName === selectedTheme);
@@ -366,7 +358,7 @@ function setTheme(theme) {
 
 themeSelect?.addEventListener("change", () => setTheme(themeSelect.value));
 
-setTheme(localStorage.getItem("yourMurugaTheme") || "peacock");
+setTheme(localStorage.getItem("yourMurugaTheme") || "divine");
 
 function setLanguage(language) {
   document.documentElement.lang = language === "ta" ? "ta" : "en";
