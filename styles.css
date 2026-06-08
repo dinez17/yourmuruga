@@ -662,22 +662,25 @@ body.lang-ta .hero-copy {
 }
 
 .welcome-image {
-  width: min(100%, 420px);
+  width: min(100%, 360px);
   justify-self: center;
-  align-self: stretch;
+  align-self: center;
   display: grid;
-  place-items: end center;
-  min-height: 320px;
+  place-items: center;
+  min-height: 430px;
   overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 18px 42px rgba(3, 36, 61, 0.16);
 }
 
 .welcome-image img {
   width: 100%;
   height: 100%;
-  max-height: 460px;
-  object-fit: contain;
-  object-position: center bottom;
-  filter: drop-shadow(0 20px 34px rgba(3, 36, 61, 0.24));
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .answer-layout,
@@ -1467,8 +1470,8 @@ body.lang-ta .hero-copy {
   }
 
   .welcome-image {
-    width: min(100%, 300px);
-    min-height: 240px;
+    width: min(100%, 320px);
+    min-height: 380px;
   }
 
   .lang-button {

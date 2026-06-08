@@ -313,7 +313,7 @@ Object.assign(translations.en, {
     "During life's challenges, confusion, and important decisions, receive a meaningful message inspired by Lord Muruga's wisdom.",
   heroPrimary: "🔱 Choose a Number",
   heroSecondary: "🙏 Get YourMuruga Answer",
-  popupKicker: "Your Muruga Answer",
+  popupKicker: "Your Muruga",
   popupTitle: "Today Muruga's Message For You",
   popupText:
     "Close your eyes for one minute.\nPray to Lord Muruga in your heart.\nChoose a number from 1 to 100.\nYou will receive a meaningful and encouraging message.",
@@ -330,13 +330,13 @@ Object.assign(translations.ta, {
   heroCopy:
     "வாழ்க்கையின் சவால்கள், குழப்பங்கள் மற்றும் முக்கியமான முடிவுகளின் நேரங்களில், முருகப்பெருமானின் ஞானத்தால் ஊக்கமளிக்கப்பட்ட ஒரு அர்த்தமுள்ள செய்தியைப் பெறுங்கள்.",
   heroPrimary: "🔱 Choose a Number",
-  heroSecondary: "🙏 Get Your Muruga Answer",
-  popupKicker: "Your Muruga Answer",
+  heroSecondary: "Get Your Muruga Answer",
+  popupKicker: "Your Muruga",
   popupTitle: "இன்று முருகன் உங்களுக்கு சொல்லும் செய்தி",
   popupText:
     "கண்களை ஒரு நிமிடம் மூடுங்கள்.\nமுருகப்பெருமானை மனதில் நினைத்து பிரார்த்தனை செய்யுங்கள்.\n1 முதல் 100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்.\nஉங்களுக்கு ஒரு அர்த்தமுள்ள ஊக்கமளிக்கும் செய்தி கிடைக்கும்.",
-  popupInputLabel: "Number Input",
-  popupButton: "Get Your Muruga Answer",
+  popupInputLabel: "",
+  popupButton: "Click here for Answer",
   popupLoading: "முருகன் அருள் செய்தி பெறப்படுகிறது...",
   messagePopupKicker: "முருகன் அருள் செய்தி",
   messagePopupTitle: "உங்களுக்கான அருள் செய்தி"
