@@ -449,6 +449,30 @@ body.lang-ta .hero-copy {
   cursor: pointer;
 }
 
+.floating-answer-button {
+  position: fixed;
+  right: clamp(16px, 3vw, 34px);
+  bottom: clamp(16px, 3vw, 32px);
+  z-index: 8;
+  min-height: 50px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 22px;
+  color: #05202b;
+  background: var(--button-gradient);
+  box-shadow:
+    0 16px 38px rgba(2, 6, 23, 0.26),
+    0 0 0 4px rgba(255, 255, 255, 0.18);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.floating-answer-button:hover {
+  transform: translateY(-1px);
+}
+
 .daily-band {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
@@ -1667,6 +1691,14 @@ body.lang-ta .hero-copy {
   .secondary-action {
     width: 100%;
     justify-content: center;
+  }
+
+  .floating-answer-button {
+    right: 14px;
+    bottom: 14px;
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 11px;
   }
 
   .section,

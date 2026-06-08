@@ -156,6 +156,7 @@ const mainMessageForm = document.querySelector("#main-message-form");
 const mainMuruganNumberInput = document.querySelector("#main-murugan-number");
 const mainMessageError = document.querySelector("#main-message-error");
 const answerOpenButtons = document.querySelectorAll("[data-open-answer]");
+const arupadaiAccordions = document.querySelectorAll(".arupadai-accordion details");
 const themeNames = [
   "divine",
   "vel",
@@ -326,7 +327,7 @@ Object.assign(translations.en, {
 
 Object.assign(translations.ta, {
   heroEyebrow: "ஒரு எண் மட்டுமல்ல...\nஒரு வழிகாட்டுதல்...\nஒரு புதிய நம்பிக்கை...",
-  heroTitle: "YourMuruga",
+  heroTitle: "YourMuruga.com",
   heroCopy:
     "வாழ்க்கையின் சவால்கள், குழப்பங்கள் மற்றும் முக்கியமான முடிவுகளின் நேரங்களில், முருகப்பெருமானின் ஞானத்தால் ஊக்கமளிக்கப்பட்ட ஒரு அர்த்தமுள்ள செய்தியைப் பெறுங்கள்.",
   heroPrimary: "Choose a Number",
@@ -359,6 +360,20 @@ function setTheme(theme) {
 themeSelect?.addEventListener("change", () => setTheme(themeSelect.value));
 
 setTheme(localStorage.getItem("yourMurugaTheme") || "divine");
+
+arupadaiAccordions.forEach((accordion) => {
+  accordion.addEventListener("toggle", () => {
+    if (!accordion.open) {
+      return;
+    }
+
+    arupadaiAccordions.forEach((otherAccordion) => {
+      if (otherAccordion !== accordion) {
+        otherAccordion.open = false;
+      }
+    });
+  });
+});
 
 function setLanguage(language) {
   document.documentElement.lang = language === "ta" ? "ta" : "en";
