@@ -1196,13 +1196,42 @@ body.lang-ta .hero-copy {
 }
 
 .prayer-section {
+  position: relative;
+  overflow: hidden;
   background:
-    url("assets/logo.png") center / min(420px, 52vw) no-repeat,
-    radial-gradient(circle at 12% 82%, rgba(250, 204, 21, 0.38), transparent 12%),
-    radial-gradient(circle at 88% 82%, rgba(250, 204, 21, 0.34), transparent 12%),
-    radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.2), transparent 28%),
-    linear-gradient(135deg, rgba(26, 18, 11, 0.96), rgba(88, 23, 20, 0.9));
-  background-blend-mode: soft-light, normal, normal, normal, normal;
+    radial-gradient(ellipse at 50% -12%, rgba(255, 232, 163, 0.92), rgba(250, 204, 21, 0.24) 28%, transparent 56%),
+    radial-gradient(ellipse at 18% 86%, rgba(255, 255, 255, 0.5), transparent 28%),
+    radial-gradient(ellipse at 78% 82%, rgba(255, 255, 255, 0.42), transparent 26%),
+    linear-gradient(180deg, #dbeafe 0%, #f8fafc 46%, #fff7ed 100%);
+}
+
+.prayer-section::before,
+.prayer-section::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  height: 180px;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 18% 58%, rgba(255, 255, 255, 0.88), transparent 34%),
+    radial-gradient(ellipse at 42% 42%, rgba(255, 255, 255, 0.78), transparent 30%),
+    radial-gradient(ellipse at 68% 58%, rgba(255, 255, 255, 0.82), transparent 34%),
+    radial-gradient(ellipse at 88% 46%, rgba(255, 255, 255, 0.7), transparent 28%);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.prayer-section::before {
+  top: 28px;
+  opacity: 0.58;
+  animation: cloudDrift 18s ease-in-out infinite alternate;
+}
+
+.prayer-section::after {
+  bottom: 18px;
+  opacity: 0.48;
+  animation: cloudDrift 22s ease-in-out infinite alternate-reverse;
 }
 
 .prayer-card {
@@ -1217,13 +1246,61 @@ body.lang-ta .hero-copy {
   text-align: center;
   color: #fff8e7;
   background:
-    radial-gradient(circle at 50% 0%, rgba(250, 204, 21, 0.18), transparent 34%),
-    linear-gradient(145deg, rgba(26, 18, 11, 0.92), rgba(67, 30, 12, 0.9));
+    radial-gradient(circle at 50% 0%, rgba(255, 232, 163, 0.22), transparent 34%),
+    linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(35, 29, 72, 0.94));
   border: 1px solid rgba(250, 204, 21, 0.35);
   border-left: 6px solid var(--gold);
   box-shadow:
     0 22px 70px rgba(2, 6, 23, 0.28),
     inset 0 0 0 1px rgba(255, 248, 231, 0.08);
+}
+
+.prayer-petals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.prayer-petals span {
+  position: absolute;
+  top: -24px;
+  width: 14px;
+  height: 20px;
+  border-radius: 70% 30% 70% 30%;
+  background: linear-gradient(145deg, #fda4af, #fb7185 60%, #fff1f2);
+  opacity: 0.72;
+  animation: petalFloat 10s linear infinite;
+}
+
+.prayer-petals span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.prayer-petals span:nth-child(2) { left: 24%; animation-delay: 2s; }
+.prayer-petals span:nth-child(3) { left: 42%; animation-delay: 4s; }
+.prayer-petals span:nth-child(4) { left: 61%; animation-delay: 1s; }
+.prayer-petals span:nth-child(5) { left: 76%; animation-delay: 5s; }
+.prayer-petals span:nth-child(6) { left: 90%; animation-delay: 3s; }
+
+@keyframes cloudDrift {
+  from {
+    transform: translateX(-28px);
+  }
+  to {
+    transform: translateX(28px);
+  }
+}
+
+@keyframes petalFloat {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.72;
+  }
+  100% {
+    transform: translateY(760px) translateX(70px) rotate(260deg);
+    opacity: 0;
+  }
 }
 
 .devotional-prayer-card::before,
@@ -1285,14 +1362,16 @@ body.lang-ta .hero-copy {
   z-index: 1;
   max-width: 720px;
   margin: 0 auto;
-  color: rgba(255, 248, 231, 0.94);
+  color: #fff;
   font-size: clamp(14px, 1.35vw, 18px);
   font-weight: 700;
   line-height: 1.85;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.72);
 }
 
 .devotional-prayer-card blockquote p {
   margin: 0 0 14px;
+  color: #fff !important;
 }
 
 .vel-chant {
@@ -1300,6 +1379,7 @@ body.lang-ta .hero-copy {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  color: #fff !important;
 }
 
 .vel-chant img {
