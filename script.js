@@ -158,6 +158,12 @@ const mainMessageError = document.querySelector("#main-message-error");
 const answerOpenButtons = document.querySelectorAll("[data-open-answer]");
 const arupadaiAccordions = document.querySelectorAll(".arupadai-accordion details");
 const miracleAccordions = document.querySelectorAll(".miracle-accordion details");
+const prayerText = document.querySelector("#daily-prayer-text");
+const prayerBellButton = document.querySelector("[data-prayer-bell]");
+const prayerListenButton = document.querySelector("[data-prayer-listen]");
+const prayerCopyButton = document.querySelector("[data-prayer-copy]");
+const prayerShareButton = document.querySelector("[data-prayer-share]");
+const prayerFeedback = document.querySelector("#prayer-feedback");
 const themeNames = [
   "divine",
   "vel",
@@ -388,6 +394,95 @@ miracleAccordions.forEach((accordion) => {
       }
     });
   });
+});
+
+function getPrayerPlainText() {
+  return prayerText?.innerText.trim() || "";
+}
+
+function setPrayerFeedback(message) {
+  if (!prayerFeedback) {
+    return;
+  }
+
+  prayerFeedback.textContent = message;
+  window.clearTimeout(setPrayerFeedback.timeoutId);
+  setPrayerFeedback.timeoutId = window.setTimeout(() => {
+    prayerFeedback.textContent = "";
+  }, 2400);
+}
+
+function playBellSound() {
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) {
+    setPrayerFeedback("Bell sound is not supported in this browser.");
+    return;
+  }
+
+  const audioContext = new AudioContext();
+  const now = audioContext.currentTime;
+  const oscillator = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+
+  oscillator.type = "sine";
+  oscillator.frequency.setValueAtTime(880, now);
+  oscillator.frequency.exponentialRampToValueAtTime(440, now + 1.2);
+  gain.gain.setValueAtTime(0.0001, now);
+  gain.gain.exponentialRampToValueAtTime(0.22, now + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.4);
+
+  oscillator.connect(gain);
+  gain.connect(audioContext.destination);
+  oscillator.start(now);
+  oscillator.stop(now + 1.45);
+  setPrayerFeedback("Bell blessed.");
+}
+
+prayerBellButton?.addEventListener("click", playBellSound);
+
+prayerListenButton?.addEventListener("click", () => {
+  const prayer = getPrayerPlainText();
+  if (!("speechSynthesis" in window) || !prayer) {
+    setPrayerFeedback("Listen is not supported in this browser.");
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(prayer);
+  utterance.lang = "ta-IN";
+  utterance.rate = 0.82;
+  utterance.pitch = 0.92;
+  window.speechSynthesis.speak(utterance);
+  setPrayerFeedback("Reading prayer.");
+});
+
+prayerCopyButton?.addEventListener("click", async () => {
+  const prayer = getPrayerPlainText();
+  try {
+    await navigator.clipboard.writeText(prayer);
+    setPrayerFeedback("Prayer copied.");
+  } catch {
+    setPrayerFeedback("Copy failed.");
+  }
+});
+
+prayerShareButton?.addEventListener("click", async () => {
+  const prayer = getPrayerPlainText();
+  try {
+    if (navigator.share) {
+      await navigator.share({
+        title: "முருகப்பெருமானுக்கான பிரார்த்தனை",
+        text: prayer
+      });
+      setPrayerFeedback("Prayer shared.");
+      return;
+    }
+
+    await navigator.clipboard.writeText(prayer);
+    setPrayerFeedback("Sharing is unavailable. Prayer copied.");
+  } catch {
+    setPrayerFeedback("Share cancelled.");
+  }
 });
 
 function setLanguage(language) {

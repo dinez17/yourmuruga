@@ -59,11 +59,12 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow" data-i18n="heroEyebrow">ஒரு எண் மட்டுமல்ல...<br />ஒரு வழிகாட்டுதல்...<br />ஒரு புதிய நம்பிக்கை...</p>
+          
           <h1 id="hero-title" data-i18n="heroTitle">YourMuruga</h1>
           <p class="hero-copy" data-i18n="heroCopy">
             வாழ்க்கையின் சவால்கள், குழப்பங்கள் மற்றும் முக்கியமான முடிவுகளின் நேரங்களில், முருகப்பெருமானின் ஞானத்தால் ஊக்கமளிக்கப்பட்ட ஒரு அர்த்தமுள்ள செய்தியைப் பெறுங்கள்.
           </p>
+          <p class="eyebrow" data-i18n="heroEyebrow">ஒரு எண் மட்டுமல்ல...<br />ஒரு வழிகாட்டுதல்...<br />ஒரு புதிய நம்பிக்கை...</p>
         </div>
       </section>
 
@@ -247,15 +248,26 @@
       </section>
 
       <section class="section prayer-section" id="daily-prayer">
-        <div class="home-wrap prayer-card">
-          <p class="section-kicker">Prayer</p>
-          <h2>வேலவா முருகா!</h2>
-          <p>
-            நான் குழப்பத்தில் இருக்கும்போது எனக்கு வழிகாட்டு.<br />
-            நான் பலவீனமாக இருக்கும்போது எனக்கு வலிமை கொடு.<br />
-            நான் பயப்படும் நேரங்களில் என்னைக் காப்பாற்று.<br />
-            ஓம் சரவணபவா!
-          </p>
+        <div class="home-wrap prayer-card devotional-prayer-card">
+          <div class="incense-smoke" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+         
+          <h2>🙏 முருகப்பெருமானுக்கான பிரார்த்தனை 🙏</h2>
+          <blockquote id="daily-prayer-text">
+            <p>"வேலவா முருகா!</p>
+            <p>நான் குழப்பத்தில் இருக்கும்போது எனக்கு வழிகாட்டு.<br />நான் பலவீனமாக இருக்கும்போது எனக்கு வலிமை கொடு.<br />நான் பயப்படும் நேரங்களில் என்னைக் காப்பாற்று.</p>
+            <p>உன் அருளைவிட பெரிய துன்பம் எதுவுமில்லை என்பதை<br />எப்போதும் எனக்கு நினைவூட்டு.</p>
+            <p>என் இதயத்தை ஞானம், துணிவு மற்றும் நம்பிக்கையால்<br />நிரப்பி அருள்வாயாக.</p>
+            <p>ஓம் சரவணபவா!"</p>
+            <p class="vel-chant"><img src="assets/logo.png" alt="" /> வேல்! வேல்! வெற்றி வேல்! <img src="assets/logo.png" alt="" /></p>
+            <p>🌺 முருகா ஹரோ ஹரா! 🌺</p>
+          </blockquote>
+
+
+          <p class="prayer-feedback" id="prayer-feedback" aria-live="polite"></p>
         </div>
       </section>
 
@@ -271,6 +283,25 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="" />
+        <div>
+          <strong>Your Muruga</strong>
+          <p>முருகப்பெருமானின் அருள், நம்பிக்கை, வழிகாட்டுதல்.</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="#home">Home</a>
+        <a href="#welcome">Welcome</a>
+        <a href="#miracles">Miracles</a>
+        <a href="#arupadai-veedu">ஆறுபடை வீடுகள்</a>
+        <a href="#daily-prayer">Prayer</a>
+      </nav>
+      <p class="footer-note">ஓம் சரவணபவா. வேல்! வேல்! வெற்றி வேல்!</p>
+      <p class="footer-copy">© 2026 Your Muruga. All rights reserved.</p>
+    </footer>
 
     <button class="floating-answer-button" type="button" data-open-answer>Get Your Muruga Answer</button>
 
