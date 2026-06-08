@@ -600,6 +600,7 @@ body.lang-ta .hero-copy {
 .answer-section,
 .welcome-home-section,
 .how-section,
+.arupadai-section,
 .purpose-section,
 .miracles-section,
 .prayer-section,
@@ -820,6 +821,84 @@ body.lang-ta .hero-copy {
   color: #05202b;
   background: var(--gold);
   font-weight: 800;
+}
+
+.arupadai-wrap {
+  display: grid;
+  gap: 22px;
+}
+
+.arupadai-intro {
+  max-width: 980px;
+}
+
+.arupadai-intro h2,
+.arupadai-summary h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(22px, 2.3vw, 32px);
+  line-height: 1.25;
+}
+
+.arupadai-intro h3 {
+  margin: 16px 0 8px;
+  color: var(--peacock-neck);
+  font-size: clamp(16px, 1.35vw, 19px);
+}
+
+.arupadai-intro p,
+.arupadai-grid p {
+  margin: 0;
+  color: #315260;
+  font-size: clamp(13px, 1.05vw, 15px);
+  line-height: 1.75;
+}
+
+.arupadai-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.arupadai-grid article,
+.arupadai-summary {
+  border: 1px solid rgba(7, 27, 36, 0.12);
+  border-left: 5px solid var(--gold);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 14px 34px rgba(3, 55, 76, 0.09);
+}
+
+.arupadai-grid h3 {
+  margin: 0 0 10px;
+  color: var(--peacock-neck);
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.5;
+}
+
+.arupadai-summary {
+  margin-top: 2px;
+}
+
+.arupadai-summary-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.75fr) minmax(0, 1fr);
+  gap: 10px 16px;
+  margin-top: 16px;
+  color: #315260;
+  font-size: clamp(13px, 1.05vw, 15px);
+}
+
+.arupadai-summary-grid span,
+.arupadai-summary-grid strong {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.arupadai-summary-grid strong {
+  color: var(--peacock-neck);
 }
 
 .guidance-section,
@@ -1434,6 +1513,7 @@ body.lang-ta .hero-copy {
   }
 
   .steps-list,
+  .arupadai-grid,
   .miracle-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1572,6 +1652,7 @@ body.lang-ta .hero-copy {
 
   .answer-controls,
   .steps-list,
+  .arupadai-grid,
   .miracle-grid {
     grid-template-columns: 1fr;
   }
@@ -1579,6 +1660,10 @@ body.lang-ta .hero-copy {
   .steps-list li,
   .miracle-grid article {
     min-height: auto;
+  }
+
+  .arupadai-summary-grid {
+    grid-template-columns: 1fr;
   }
 
   .final-cta-card {
