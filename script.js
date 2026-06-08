@@ -40,7 +40,7 @@ const translations = {
     footerText: "Made with devotion for Lord Muruga devotees around the world."
   },
   ta: {
-    brandTag: "தமிழ் மற்றும் ஆங்கில பக்தி",
+    brandTag: "எப்போதும் உன்னோடு!",
     navPrayers: "பிரார்த்தனை",
     navTemples: "புனித தலங்கள்",
     navFestivals: "திருவிழாக்கள்",
@@ -329,9 +329,9 @@ Object.assign(translations.ta, {
   heroTitle: "YourMuruga",
   heroCopy:
     "வாழ்க்கையின் சவால்கள், குழப்பங்கள் மற்றும் முக்கியமான முடிவுகளின் நேரங்களில், முருகப்பெருமானின் ஞானத்தால் ஊக்கமளிக்கப்பட்ட ஒரு அர்த்தமுள்ள செய்தியைப் பெறுங்கள்.",
-  heroPrimary: "🔱 Choose a Number",
+  heroPrimary: "Choose a Number",
   heroSecondary: "Get Your Muruga Answer",
-  popupKicker: "Your Muruga",
+  popupKicker: "YourMuruga.com",
   popupTitle: "இன்று முருகன் உங்களுக்கு சொல்லும் செய்தி",
   popupText:
     "கண்களை ஒரு நிமிடம் மூடுங்கள்.\nமுருகப்பெருமானை மனதில் நினைத்து பிரார்த்தனை செய்யுங்கள்.\n1 முதல் 100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்.\nஉங்களுக்கு ஒரு அர்த்தமுள்ள ஊக்கமளிக்கும் செய்தி கிடைக்கும்.",

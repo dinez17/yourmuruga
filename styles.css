@@ -655,6 +655,22 @@ body.lang-ta .hero-copy {
   line-height: 1.85;
 }
 
+.welcome-blessing-list li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.welcome-blessing-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 18px;
+  height: 18px;
+  background: url("assets/bullets.jpeg") center / contain no-repeat;
+  border-radius: 50%;
+}
+
 .welcome-closing {
   margin-top: 16px !important;
   color: var(--peacock-neck) !important;
