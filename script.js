@@ -269,35 +269,35 @@ const localizedBlocks = [
         <summary>2. Tiruchendur — Senthil Andavar Temple</summary>
         <div class="arupadai-panel">
           <p>This seaside shrine is where Muruga defeated the demon Surapadman. With His Vel, Muruga split Surapadman in two; one part became the peacock and the other became the rooster. The victorious Vel is worshipped here.</p>
-          <img src="assets/tiruchendur.png" alt="Tiruchendur Senthil Andavar Temple" />
+          <img src="assets/tiruchendur.jpg" alt="Tiruchendur Senthil Andavar Temple" />
         </div>
       </details>
       <details>
         <summary>3. Swamimalai — Swaminatha Swamy Temple</summary>
         <div class="arupadai-panel">
           <p>Here, child Muruga taught the meaning of the Pranava mantra Om even to Lord Shiva. For this reason, He is called Swaminathan, the Lord who became the guru of His own father.</p>
-          <img src="assets/muruga-slide-2.png" alt="Swamimalai Swaminatha Swamy Temple" />
+          <img src="assets/swamimalai.jpg" alt="Swamimalai Swaminatha Swamy Temple" />
         </div>
       </details>
       <details>
         <summary>4. Tiruttani — Thanigachalanathar Temple</summary>
         <div class="arupadai-panel">
           <p>After Soorasamharam, Muruga came here to cool the heat of battle and gain peace. This sacred place is also associated with His love and marriage with Valli.</p>
-          <img src="assets/muruga-generated-hero.jpg" alt="Tiruttani Thanigachalanathar Temple" />
+          <img src="assets/tiruthani.jpg" alt="Tiruttani Thanigachalanathar Temple" />
         </div>
       </details>
       <details>
         <summary>5. Pazhamudircholai — Kalyanasundarar Temple</summary>
         <div class="arupadai-panel">
           <p>This beautiful hill shrine near Madurai is where Muruga blesses devotees with Valli and Deivanai. Surrounded by forests and streams, it is considered a beloved natural abode of Muruga.</p>
-          <img src="assets/muruga-slide-2%20-%20Copy.png" alt="Pazhamudircholai Kalyanasundarar Temple" />
+          <img src="assets/pazhamudircholai.jpg" alt="Pazhamudircholai Kalyanasundarar Temple" />
         </div>
       </details>
       <details>
         <summary>6. Thiruparankundram — Subramaniaswamy Temple</summary>
         <div class="arupadai-panel">
           <p>This is the first among the six sacred abodes. After defeating Surapadman, Muruga married Deivanai, daughter of Indra, here. The rock-cut temple stands as a wonder of sacred architecture.</p>
-          <img src="assets/7383.jpg" alt="Thiruparankundram Subramaniaswamy Temple" />
+          <img src="assets/thiruparankundram.jpg" alt="Thiruparankundram Subramaniaswamy Temple" />
         </div>
       </details>
     `
