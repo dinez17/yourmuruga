@@ -186,7 +186,8 @@ body.lang-ta {
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 24px;
-  padding: 8px clamp(18px, 4vw, 58px);
+  min-height: 78px;
+  padding: 3px clamp(18px, 4vw, 58px);
   background: var(--header-bg);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
@@ -195,7 +196,7 @@ body.lang-ta {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: #fff8f0;
   text-decoration: none;
   min-width: 0;
@@ -204,23 +205,19 @@ body.lang-ta {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  margin-block: -9px;
+  border-radius: 0;
   overflow: hidden;
-  background:
-    radial-gradient(circle, rgba(255, 244, 210, 0.34) 0%, rgba(242, 193, 78, 0.16) 58%, rgba(255, 248, 240, 0.08) 100%),
-    rgba(255, 248, 240, 0.18);
+  background: transparent;
   border: 0;
-  box-shadow:
-    0 0 0 4px rgba(255, 248, 240, 0.08),
-    0 10px 28px rgba(3, 20, 32, 0.34),
-    0 0 24px rgba(242, 193, 78, 0.18);
+  box-shadow: none;
 }
 
 .brand-mark img {
-  width: 104%;
-  height: 104%;
+  width: 112%;
+  height: 112%;
   object-fit: contain;
   display: block;
   filter: saturate(1.12) contrast(1.08) brightness(1.08);
@@ -685,7 +682,7 @@ body.lang-ta .hero-copy {
   top: 0.42em;
   width: 18px;
   height: 18px;
-  background: url("assets/bullets.jpeg") center / contain no-repeat;
+  background: url("assets/bullets.png") center / contain no-repeat;
   border-radius: 50%;
 }
 
@@ -1971,8 +1968,9 @@ body.lang-ta .hero-copy {
 @media (max-width: 620px) {
   .site-header {
     grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 8px 14px;
+    gap: 8px;
+    min-height: 68px;
+    padding: 4px 14px;
   }
 
   .header-actions {
@@ -1997,8 +1995,9 @@ body.lang-ta .hero-copy {
   }
 
   .brand-mark {
-    width: 54px;
-    height: 54px;
+    width: 64px;
+    height: 64px;
+    margin-block: -6px;
   }
 
   .welcome-home-card {

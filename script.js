@@ -8,7 +8,7 @@ const translations = {
     heroTitle: "Grace-Giving Darshan of Lord Murugan",
     heroCopy:
       "Kandan blesses with the Vel and the peacock. Feel Lord Murugan's divine grace every day, and receive peace of mind and spiritual strength.",
-    heroPrimary: "🙏 See Darshan",
+    heroPrimary: " See Darshan",
     heroSecondary: "📖 Today's Prayer",
     dailyKicker: "Today's Reflection",
     dailyTitle: "Let courage become devotion, and devotion become service.",
@@ -84,7 +84,7 @@ const translations = {
 translations.ta.heroTitle = "அருள் தரும் முருகன் தரிசனம்";
 translations.ta.heroCopy =
   "வேலும் மயிலும் உடன் அருள்புரியும் கந்தன். ஒவ்வொரு நாளும் முருகனின் திருவருளை உணர்ந்து, மன அமைதியையும் ஆன்மிக சக்தியையும் பெறுங்கள்.";
-translations.ta.heroPrimary = "🙏 தரிசனம் காணுங்கள்";
+translations.ta.heroPrimary = " தரிசனம் காணுங்கள்";
 translations.ta.heroSecondary = "📖 இன்றைய பிரார்த்தனை";
 
 Object.assign(translations.en, {
@@ -99,7 +99,7 @@ Object.assign(translations.en, {
     "\"If you remember me with faith, fear will leave; if you worship me with devotion, victory will seek you.\"",
   quoteSource: "– Sri Murugan",
   prayerKicker: "Daily Prayer Section",
-  dailyPrayerTitle: "🙏 Today's Prayer",
+  dailyPrayerTitle: " Today's Prayer",
   dailyPrayerText:
     "Om Saravanabhava! Remove the confusion in my mind, and bless me with good thoughts, courage, and victory."
 });
@@ -116,7 +116,7 @@ Object.assign(translations.ta, {
     "\"நம்பிக்கையுடன் என்னை நினைத்தால், பயம் விலகும்; பக்தியுடன் என்னை வணங்கினால், வெற்றி உன்னை தேடும்.\"",
   quoteSource: "– ஸ்ரீ முருகப் பெருமான்",
   prayerKicker: "தினசரி பிரார்த்தனை பகுதி",
-  dailyPrayerTitle: "🙏 இன்றைய பிரார்த்தனை",
+  dailyPrayerTitle: " இன்றைய பிரார்த்தனை",
   dailyPrayerText:
     "ஓம் சரவணபவா! என் மனதில் உள்ள குழப்பங்களை நீக்கி, நல்ல எண்ணங்களையும், தைரியத்தையும், வெற்றியையும் அருள்வாயாக."
 });
@@ -209,23 +209,23 @@ const localizedBlocks = [
       </div>
       <div class="miracle-tab-panels">
         <section class="miracle-tab-panel" role="tabpanel" id="miracle-panel-1" aria-labelledby="miracle-tab-1" data-tab-panel>
-          <h3>1. The Miracle of Courage in Difficult Times</h3>
+          <h3>The Miracle of Courage in Difficult Times</h3>
           <p>When fear, confusion, and trials arise in life, many who prayed to Muruga have received renewed courage and faith. When every path seems closed, He blesses the heart with the strength to see a new way.</p>
         </section>
         <section class="miracle-tab-panel" role="tabpanel" id="miracle-panel-2" aria-labelledby="miracle-tab-2" data-tab-panel hidden>
-          <h3>2. The Miracle of Divine Protection</h3>
+          <h3>The Miracle of Divine Protection</h3>
           <p>Devotees believe that Lord Muruga protects those who surrender to Him with complete faith. Many consider their escape from sudden dangers, accidents, and difficult situations as His grace.</p>
         </section>
         <section class="miracle-tab-panel" role="tabpanel" id="miracle-panel-3" aria-labelledby="miracle-tab-3" data-tab-panel hidden>
-          <h3>3. The Miracle of Peace of Mind</h3>
+          <h3>The Miracle of Peace of Mind</h3>
           <p>One of Lord Muruga's greatest miracles is transforming a troubled mind into a peaceful one. By chanting His name, many have found relief from anxiety, fear, and emotional pain.</p>
         </section>
         <section class="miracle-tab-panel" role="tabpanel" id="miracle-panel-4" aria-labelledby="miracle-tab-4" data-tab-panel hidden>
-          <h3>4. The Miracle of Transformation</h3>
+          <h3>The Miracle of Transformation</h3>
           <p>Muruga did not destroy Surapadman completely; He transformed him into the peacock and the rooster. Through this, He revealed the divine power that turns even negativity into good. He gives us the strength to turn suffering into victory.</p>
         </section>
         <section class="miracle-tab-panel" role="tabpanel" id="miracle-panel-5" aria-labelledby="miracle-tab-5" data-tab-panel hidden>
-          <h3>5. The Miracle of Guidance</h3>
+          <h3>The Miracle of Guidance</h3>
           <p>Many devotees believe that Lord Muruga's grace shows the right path when important decisions must be made in education, work, family, or spiritual life.</p>
         </section>
       </div>
@@ -549,7 +549,7 @@ Object.assign(translations.en, {
   heroCopy:
     "During life's challenges, confusion, and important decisions, receive a meaningful message inspired by Lord Muruga's wisdom.",
   heroPrimary: "🔱 Choose a Number",
-  heroSecondary: "🙏 Get YourMuruga Answer",
+  heroSecondary: " Get YourMuruga Answer",
   popupKicker: "Your Muruga",
   popupTitle: "Today Muruga's Message For You",
   popupText:
