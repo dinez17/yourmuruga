@@ -156,8 +156,6 @@ const mainMessageForm = document.querySelector("#main-message-form");
 const mainMuruganNumberInput = document.querySelector("#main-murugan-number");
 const mainMessageError = document.querySelector("#main-message-error");
 const answerOpenButtons = document.querySelectorAll("[data-open-answer]");
-const arupadaiAccordions = document.querySelectorAll(".arupadai-accordion details");
-const miracleAccordions = document.querySelectorAll(".miracle-accordion details");
 const prayerText = document.querySelector("#daily-prayer-text");
 const prayerBellButton = document.querySelector("[data-prayer-bell]");
 const prayerListenButton = document.querySelector("[data-prayer-listen]");
@@ -172,6 +170,197 @@ const themeNames = [
   "celestial",
   "pure"
 ];
+
+const localizedBlocks = [
+  {
+    selector: ".welcome-copy",
+    en: `
+      <h2>Dear Muruga Devotees!</h2>
+      <p>
+        Sri Muruga, cherished as the beloved deity of Tamil hearts, is worshipped as the embodiment of wisdom, courage, victory, and spiritual light. We warmly welcome you to this website dedicated to Muruga, the peacock-rider, the bearer of the Vel, and the divine consort of Valli and Deivanai.
+      </p>
+      <p>You are here because —</p>
+      <ul class="welcome-blessing-list">
+        <li>Muruga loves you.</li>
+        <li>Your heart is seeking Him.</li>
+        <li>This is the moment His grace reaches you.</li>
+      </ul>
+      <p class="welcome-closing">Welcome to the world of Muruga's grace.</p>
+    `
+  },
+  {
+    selector: ".miracle-intro",
+    en: `
+      <h2>Divine Miracles of Lord Muruga</h2>
+      <p>
+        Lord Muruga is praised as the form of compassion and the one who responds to the sincere call of true devotees. Through the ages, countless devotees have experienced beautiful changes in their lives through His grace.
+      </p>
+    `
+  },
+  {
+    selector: ".miracle-accordion",
+    en: `
+      <details open>
+        <summary>1. The Miracle of Courage in Difficult Times</summary>
+        <p>When fear, confusion, and trials arise in life, many who prayed to Muruga have received renewed courage and faith. When every path seems closed, He blesses the heart with the strength to see a new way.</p>
+      </details>
+      <details>
+        <summary>2. The Miracle of Divine Protection</summary>
+        <p>Devotees believe that Lord Muruga protects those who surrender to Him with complete faith. Many consider their escape from sudden dangers, accidents, and difficult situations as His grace.</p>
+      </details>
+      <details>
+        <summary>3. The Miracle of Peace of Mind</summary>
+        <p>One of Lord Muruga's greatest miracles is transforming a troubled mind into a peaceful one. By chanting His name, many have found relief from anxiety, fear, and emotional pain.</p>
+      </details>
+      <details>
+        <summary>4. The Miracle of Transformation</summary>
+        <p>Muruga did not destroy Surapadman completely; He transformed him into the peacock and the rooster. Through this, He revealed the divine power that turns even negativity into good. He gives us the strength to turn suffering into victory.</p>
+      </details>
+      <details>
+        <summary>5. The Miracle of Guidance</summary>
+        <p>Many devotees believe that Lord Muruga's grace shows the right path when important decisions must be made in education, work, family, or spiritual life.</p>
+      </details>
+    `
+  },
+  {
+    selector: "#how-it-works .home-wrap",
+    en: `
+      <h2>How does YourMuruga.com work?</h2>
+      <ol class="steps-list">
+        <li>Close your eyes for one minute.</li>
+        <li>Think of your question or prayer.</li>
+        <li>Pray to Muruga with your whole heart.</li>
+        <li>Choose a number from 1 to 100.</li>
+        <li>Receive Muruga's grace message.</li>
+      </ol>
+    `
+  },
+  {
+    selector: ".arupadai-intro",
+    en: `
+      <p class="section-kicker">Six Sacred Abodes</p>
+      <h2>Lord Muruga's Arupadai Veedu</h2>
+      <h3>What is Arupadai Veedu?</h3>
+      <p>
+        The six sacred temples in Tamil Nadu that are especially associated with Lord Muruga are revered as the Arupadai Veedu. These six places reflect different stages of Muruga's divine life and sacred legends. Tamil tradition considers visiting them highly auspicious.
+      </p>
+    `
+  },
+  {
+    selector: ".arupadai-accordion",
+    en: `
+      <details open>
+        <summary>1. Palani — Dhandayuthapani Temple</summary>
+        <div class="arupadai-panel">
+          <p>Muruga stands here as Dhandayuthapani. When Ganesha won the fruit of wisdom, Muruga renounced ornaments and worldly pride, carrying only a staff, and stood in penance on Palani Hill. Devotees believe He grants sincere prayers.</p>
+          <img src="assets/7383.jpg" alt="Palani Dhandayuthapani Temple" />
+        </div>
+      </details>
+      <details>
+        <summary>2. Tiruchendur — Senthil Andavar Temple</summary>
+        <div class="arupadai-panel">
+          <p>This seaside shrine is where Muruga defeated the demon Surapadman. With His Vel, Muruga split Surapadman in two; one part became the peacock and the other became the rooster. The victorious Vel is worshipped here.</p>
+          <img src="assets/muruga-hero.png" alt="Tiruchendur Senthil Andavar Temple" />
+        </div>
+      </details>
+      <details>
+        <summary>3. Swamimalai — Swaminatha Swamy Temple</summary>
+        <div class="arupadai-panel">
+          <p>Here, child Muruga taught the meaning of the Pranava mantra Om even to Lord Shiva. For this reason, He is called Swaminathan, the Lord who became the guru of His own father.</p>
+          <img src="assets/muruga-slide-2.png" alt="Swamimalai Swaminatha Swamy Temple" />
+        </div>
+      </details>
+      <details>
+        <summary>4. Tiruttani — Thanigachalanathar Temple</summary>
+        <div class="arupadai-panel">
+          <p>After Soorasamharam, Muruga came here to cool the heat of battle and gain peace. This sacred place is also associated with His love and marriage with Valli.</p>
+          <img src="assets/muruga-generated-hero.jpg" alt="Tiruttani Thanigachalanathar Temple" />
+        </div>
+      </details>
+      <details>
+        <summary>5. Pazhamudircholai — Kalyanasundarar Temple</summary>
+        <div class="arupadai-panel">
+          <p>This beautiful hill shrine near Madurai is where Muruga blesses devotees with Valli and Deivanai. Surrounded by forests and streams, it is considered a beloved natural abode of Muruga.</p>
+          <img src="assets/muruga-slide-2%20-%20Copy.png" alt="Pazhamudircholai Kalyanasundarar Temple" />
+        </div>
+      </details>
+      <details>
+        <summary>6. Thiruparankundram — Subramaniaswamy Temple</summary>
+        <div class="arupadai-panel">
+          <p>This is the first among the six sacred abodes. After defeating Surapadman, Muruga married Deivanai, daughter of Indra, here. The rock-cut temple stands as a wonder of sacred architecture.</p>
+          <img src="assets/7383.jpg" alt="Thiruparankundram Subramaniaswamy Temple" />
+        </div>
+      </details>
+    `
+  },
+  {
+    selector: ".arupadai-summary",
+    en: `
+      <h3>Essence of the Six Abodes</h3>
+      <div class="arupadai-summary-grid">
+        <span>Palani</span><strong>Renunciation and detachment</strong>
+        <span>Tiruchendur</span><strong>Victory and courage</strong>
+        <span>Swamimalai</span><strong>Wisdom and teaching</strong>
+        <span>Tiruttani</span><strong>Peace and love</strong>
+        <span>Pazhamudircholai</span><strong>Grace and nature</strong>
+        <span>Thiruparankundram</span><strong>Marriage and beginning</strong>
+      </div>
+    `
+  },
+  {
+    selector: ".trust-card",
+    en: `
+      <p>Trust Muruga...</p>
+      <p>Trust yourself too...</p>
+      <ul>
+        <li>Courage is greater than fear.</li>
+        <li>Wisdom is higher than confusion.</li>
+        <li>Perseverance is stronger than failure.</li>
+      </ul>
+    `
+  },
+  {
+    selector: ".devotional-prayer-card h2",
+    en: "Prayer to Lord Muruga"
+  },
+  {
+    selector: "#daily-prayer-text",
+    en: `
+      <p>"Velava Muruga!</p>
+      <p>Guide me when I am confused.<br />Give me strength when I feel weak.<br />Protect me in moments of fear.</p>
+      <p>Always remind me that no sorrow is greater<br />than Your grace.</p>
+      <p>Fill my heart with wisdom, courage, and faith,<br />and bless me.</p>
+      <p>Om Saravanabhava!"</p>
+      <p class="vel-chant"><img src="assets/logo.png" alt="" /> Vel! Vel! Vetri Vel! <img src="assets/logo.png" alt="" /></p>
+      <p>Muruga Haro Hara!</p>
+    `
+  },
+  {
+    selector: ".footer-brand p",
+    en: "Lord Muruga's grace, hope, and guidance."
+  },
+  {
+    selector: ".footer-links",
+    en: `
+      <a href="#home">Home</a>
+      <a href="#welcome">Welcome</a>
+      <a href="#miracles">Miracles</a>
+      <a href="#arupadai-veedu">Six Abodes</a>
+      <a href="#daily-prayer">Prayer</a>
+    `
+  },
+  {
+    selector: ".footer-note",
+    en: "Om Saravanabhava. Vel! Vel! Vetri Vel!"
+  }
+];
+
+localizedBlocks.forEach((block) => {
+  const node = document.querySelector(block.selector);
+  if (node) {
+    block.ta = node.innerHTML;
+  }
+});
 
 const muruganMessages = [
   "ஒவ்வொரு காலையும் ஒரு புதிய வாய்ப்பைத் தருகிறது. இன்று நீங்கள் எடுக்கும் சிறிய ஒரு முன்னேற்ற அடியும் நாளைய பெரிய வெற்றிக்கான அடித்தளமாக மாறலாம். உங்களை மற்றவர்களுடன் ஒப்பிட வேண்டாம்; உங்கள் பயணம் தனித்துவமானது.\n மெதுவாக நடந்தாலும் பரவாயில்லை; நின்றுவிடாமல் இருப்பதே உண்மையான வெற்றி.",
@@ -276,6 +465,37 @@ const muruganMessages = [
   "என் செல்லமே,\nபுதிய வாழ்க்கையை நோக்கி நீ எடுக்கும் ஒவ்வொரு அடியையும் நான் பார்த்துக் கொண்டிருக்கிறேன். உன் பயத்தையும், உன் நம்பிக்கையையும், உன் கனவுகளையும் நான் அறிவேன். அதனால் சொல்கிறேன்—பின்னோக்கி பார்க்காமல் முன்னேறு. உன் சிறந்த நாட்கள் இன்னும் உன்னை நோக்கி வந்து கொண்டிருக்கின்றன.\nநினைவில் கொள்: நான் உனக்காக தயார் செய்த எதிர்காலம், உன் பயத்தை விட பெரியது."
 ];
 
+const muruganMessagesEn = [
+  "Every morning brings a new opportunity. Even one small step you take today can become the foundation for tomorrow's victory. Do not compare your journey with anyone else's. Moving slowly is fine; true success is refusing to stop.",
+  "You still have dreams, and you still have the heart to try. That is enough. The world may doubt your ability, but no one can stop your effort. Choose faith over fear and action over doubt.",
+  "Sometimes life does not give answers immediately. It teaches patience and trust first. The challenges you face now are not the end of your story; they are the beginning of a new chapter.",
+  "A year from now, many things that worry you today may become only a small part of your success story. Your talents, experience, and strength can create a beautiful future.",
+  "Life may feel hard now, but remember the path you have already crossed. You are stronger than you think. Make one small progress today, and do not lose hope.",
+  "Do not measure yourself by another person's success. A tree bears fruit in its own season, and a flower blooms in its own time. You are not late; you are growing in your time.",
+  "When you feel sad about what you do not have, do not forget what you already carry within you. Your experience, patience, kindness, and inner strength are rare gifts.",
+  "The path ahead may not look clear right now. Keep moving. What feels like a dream today can become real tomorrow when you continue with faith.",
+  "There may be days when you feel misunderstood. Your quiet struggles and your efforts are not wasted. Growth often happens unseen before it becomes visible.",
+  "When fear rises, remember Muruga's Vel as a symbol of clarity. Let courage enter your heart, and take the next step with faith.",
+  "Your past does not have the power to imprison your future. What you choose today can open a new doorway.",
+  "Confusion is not failure. It is a sign that your heart is searching for direction. Be still, pray with sincerity, and the right step will become clear.",
+  "Do not give up because the result is delayed. Some blessings take time because they are preparing you for something stronger.",
+  "You are being shaped by every lesson, every struggle, and every prayer. Trust the process and keep walking.",
+  "Muruga's grace does not always remove the mountain; sometimes it gives you the strength to climb it.",
+  "Your worth is not decided by one mistake, one delay, or one rejection. Your sincere effort has divine value.",
+  "Let peace guide your words, courage guide your actions, and devotion guide your heart.",
+  "A calm mind can see what a fearful mind misses. Breathe, pray, and choose the path with wisdom.",
+  "Even when you feel alone, grace is near. Muruga's guidance can arrive as strength, patience, or a sudden clear thought.",
+  "Keep your faith alive. One honest prayer, one brave decision, and one steady step can change the direction of your life."
+];
+
+function getMuruganMessage(number) {
+  if (document.documentElement.lang === "en") {
+    return muruganMessagesEn[(number - 1) % muruganMessagesEn.length];
+  }
+
+  return muruganMessages[number - 1];
+}
+
 Object.assign(translations.en, {
   popupKicker: "Your Murugan's Grace",
   popupTitle: "Om Saravana Bhava",
@@ -368,33 +588,33 @@ themeSelect?.addEventListener("change", () => setTheme(themeSelect.value));
 
 setTheme(localStorage.getItem("yourMurugaTheme") || "divine");
 
-arupadaiAccordions.forEach((accordion) => {
-  accordion.addEventListener("toggle", () => {
-    if (!accordion.open) {
+function bindExclusiveAccordions(selector) {
+  document.querySelectorAll(`${selector} details`).forEach((accordion) => {
+    if (accordion.dataset.accordionBound === "true") {
       return;
     }
 
-    arupadaiAccordions.forEach((otherAccordion) => {
-      if (otherAccordion !== accordion) {
-        otherAccordion.open = false;
+    accordion.dataset.accordionBound = "true";
+    accordion.addEventListener("toggle", () => {
+      if (!accordion.open) {
+        return;
       }
+
+      document.querySelectorAll(`${selector} details`).forEach((otherAccordion) => {
+        if (otherAccordion !== accordion) {
+          otherAccordion.open = false;
+        }
+      });
     });
   });
-});
+}
 
-miracleAccordions.forEach((accordion) => {
-  accordion.addEventListener("toggle", () => {
-    if (!accordion.open) {
-      return;
-    }
+function bindAllAccordions() {
+  bindExclusiveAccordions(".arupadai-accordion");
+  bindExclusiveAccordions(".miracle-accordion");
+}
 
-    miracleAccordions.forEach((otherAccordion) => {
-      if (otherAccordion !== accordion) {
-        otherAccordion.open = false;
-      }
-    });
-  });
-});
+bindAllAccordions();
 
 function getPrayerPlainText() {
   return prayerText?.innerText.trim() || "";
@@ -499,6 +719,15 @@ function setLanguage(language) {
   languageContentNodes.forEach((node) => {
     node.hidden = node.dataset.contentLang !== language;
   });
+
+  localizedBlocks.forEach((block) => {
+    const node = document.querySelector(block.selector);
+    if (node) {
+      node.innerHTML = language === "en" ? block.en : block.ta;
+    }
+  });
+
+  bindAllAccordions();
 
   languageButtons.forEach((button) => {
     const isActive = button.dataset.lang === language;
@@ -607,7 +836,7 @@ function showMuruganMessage(selectedNumber, errorNode, sourceInput, sourceForm) 
   }
 
   if (muruganMessage) {
-    muruganMessage.textContent = muruganMessages[selectedNumber - 1];
+    muruganMessage.textContent = getMuruganMessage(selectedNumber);
   }
 
   sourceForm?.classList.add("is-loading");
