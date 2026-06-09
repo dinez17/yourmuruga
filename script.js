@@ -141,6 +141,8 @@ Object.assign(translations.ta, {
 
 const languageButtons = document.querySelectorAll(".lang-button");
 const themeSelect = document.querySelector("#theme-select");
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
 const languageContentNodes = document.querySelectorAll("[data-content-lang]");
 const devotionPopup = document.querySelector("#devotion-popup");
@@ -593,9 +595,27 @@ function setTheme(theme) {
   localStorage.setItem("yourMurugaTheme", selectedTheme);
 }
 
-themeSelect?.addEventListener("change", () => setTheme(themeSelect.value));
+themeSelect?.addEventListener("change", () => {
+  setTheme(themeSelect.value);
+  setMenuOpen(false);
+});
 
 setTheme(localStorage.getItem("yourMurugaTheme") || "divine");
+
+function setMenuOpen(isOpen) {
+  siteHeader?.classList.toggle("menu-open", isOpen);
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+}
+
+menuToggle?.addEventListener("click", () => {
+  setMenuOpen(!siteHeader?.classList.contains("menu-open"));
+});
+
+window.matchMedia("(min-width: 621px)").addEventListener("change", (event) => {
+  if (event.matches) {
+    setMenuOpen(false);
+  }
+});
 
 function bindExclusiveAccordions(selector) {
   document.querySelectorAll(`${selector} details`).forEach((accordion) => {
@@ -806,7 +826,10 @@ function setLanguage(language) {
 }
 
 languageButtons.forEach((button) => {
-  button.addEventListener("click", () => setLanguage(button.dataset.lang));
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.lang);
+    setMenuOpen(false);
+  });
 });
 
 setLanguage(localStorage.getItem("yourMurugaLanguage") || "ta");

@@ -269,6 +269,40 @@ body.lang-ta {
   min-width: 0;
 }
 
+.menu-toggle {
+  display: none;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(255, 248, 240, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 248, 240, 0.12);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 3px 0;
+  border-radius: 999px;
+  background: #fff8f0;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.site-header.menu-open .menu-toggle span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.site-header.menu-open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header.menu-open .menu-toggle span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 .theme-switch {
   display: inline-flex;
   align-items: center;
@@ -1963,31 +1997,53 @@ body.lang-ta .hero-copy {
   .section-image img {
     min-height: 260px;
   }
+
+  .miracle-tab-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 620px) {
   .site-header {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
     gap: 8px;
     min-height: 68px;
     padding: 4px 14px;
   }
 
+  .menu-toggle {
+    display: grid;
+  }
+
   .header-actions {
     grid-column: 1 / -1;
-    justify-content: space-between;
+    display: none;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: column;
     gap: 8px;
+    padding: 8px 0 4px;
+  }
+
+  .site-header.menu-open .header-actions {
+    display: flex;
   }
 
   .theme-switch {
+    justify-content: space-between;
     gap: 6px;
     padding: 4px 5px 4px 9px;
   }
 
   .theme-select {
-    min-width: 116px;
+    min-width: 0;
+    width: min(220px, 62vw);
     height: 30px;
     font-size: 11px;
+  }
+
+  .language-switch {
+    width: 100%;
   }
 
   .brand small {
@@ -2125,22 +2181,47 @@ body.lang-ta .hero-copy {
     max-height: 260px;
   }
 
+  .miracle-tabs {
+    gap: 12px;
+  }
+
   .miracle-tab-list {
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 7px;
+    overflow: visible;
   }
 
   .miracle-tab-list button {
-    flex: 0 0 auto;
-    min-width: 132px;
-    scroll-snap-align: start;
+    min-width: 0;
+    min-height: 42px;
+    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .miracle-tab-list button:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .miracle-tab-panels {
+    border-left-width: 4px;
   }
 
   .miracle-tab-panel {
-    min-height: 220px;
-    padding: 20px;
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .miracle-tab-panel h3 {
+    font-size: 17px;
+  }
+
+  .miracle-tab-panel p {
+    font-size: 13px;
+    line-height: 1.7;
   }
 
   .final-cta-card {
