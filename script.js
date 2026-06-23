@@ -357,6 +357,17 @@ const localizedBlocks = [
     `
   },
   {
+    selector: ".mantra-grid",
+    en: `
+      <article>🔱 Om Saravanabhavaya Namaha</article>
+      <article>🔱 Om Subrahmanyaya Namaha</article>
+      <article>🔱 Om Shanmukhaya Namaha</article>
+      <article>🔱 Om Velmurugaya Namaha</article>
+      <article>🔱 Om Dandayudhapaanaye Namaha</article>
+      <article>🔱 Om Kandanaya Namaha</article>
+    `
+  },
+  {
     selector: ".final-prayer-quote",
     en: `"Trust Muruga...<br />Trust yourself...<br />Keep moving forward..."`
   },

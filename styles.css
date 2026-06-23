@@ -379,6 +379,131 @@
   color: var(--ink) !important;
 }
 
+body.lang-ta .mantra-108-heading[data-content-lang="en"],
+body.lang-ta .mantra-108-list[data-content-lang="en"],
+body:not(.lang-ta) .mantra-108-heading[data-content-lang="ta"],
+body:not(.lang-ta) .mantra-108-list[data-content-lang="ta"] {
+  display: none !important;
+}
+
+body.lang-ta .mantra-108-heading[data-content-lang="ta"],
+body:not(.lang-ta) .mantra-108-heading[data-content-lang="en"] {
+  display: block !important;
+}
+
+body.lang-ta .mantra-108-list[data-content-lang="ta"],
+body:not(.lang-ta) .mantra-108-list[data-content-lang="en"] {
+  display: grid !important;
+}
+
+.prayer-hero {
+  min-height: 420px !important;
+  padding: 72px 20px 58px !important;
+}
+
+.prayer-hero h1 {
+  font-size: clamp(28px, 4vw, 46px) !important;
+}
+
+.prayer-hero-chant {
+  margin-top: 18px;
+}
+
+@media (max-width: 620px) {
+  .prayer-hero {
+    min-height: 380px !important;
+    padding: 58px 18px 44px !important;
+  }
+}
+
+.mantra-108-section {
+  background:
+    radial-gradient(circle at 86% 12%, rgba(20, 184, 166, 0.14), transparent 28%),
+    var(--soft-section-bg);
+}
+
+.mantra-108-heading {
+  max-width: 860px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.mantra-108-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(23px, 2.8vw, 38px);
+  line-height: 1.25;
+}
+
+.mantra-108-heading p:not(.section-kicker) {
+  margin: 12px 0 0;
+  color: #315260;
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.75;
+}
+
+.mantra-108-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: muruga-mantra;
+}
+
+.mantra-108-heading[hidden],
+.mantra-108-list[hidden] {
+  display: none !important;
+}
+
+.mantra-108-list li {
+  counter-increment: muruga-mantra;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 58px;
+  border: 1px solid rgba(7, 27, 36, 0.12);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--peacock-neck);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 30px rgba(3, 55, 76, 0.08);
+  font-size: clamp(13px, 1vw, 15px);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.mantra-108-list li::before {
+  content: counter(muruga-mantra);
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #1a120b;
+  background: var(--button-gradient);
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .mantra-108-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .mantra-108-list {
+    grid-template-columns: 1fr;
+  }
+
+  .mantra-108-list li {
+    min-height: 52px;
+  }
+}
+
 .popular-mantras-section {
   background:
     radial-gradient(circle at 18% 18%, rgba(212, 175, 55, 0.18), transparent 28%),
@@ -3103,4 +3228,22 @@ body.lang-ta .hero-copy {
 .mantra-section .mantra-card h2,
 .mantra-section .mantra-card p:not(.section-kicker):not(.highlight-mantra):not(.prayer-feedback) {
   color: var(--ink) !important;
+}
+
+/* Final 108-mantra language visibility guard. */
+body.lang-ta .mantra-108-heading[data-content-lang="en"],
+body.lang-ta .mantra-108-list[data-content-lang="en"],
+body:not(.lang-ta) .mantra-108-heading[data-content-lang="ta"],
+body:not(.lang-ta) .mantra-108-list[data-content-lang="ta"] {
+  display: none !important;
+}
+
+body.lang-ta .mantra-108-heading[data-content-lang="ta"],
+body:not(.lang-ta) .mantra-108-heading[data-content-lang="en"] {
+  display: block !important;
+}
+
+body.lang-ta .mantra-108-list[data-content-lang="ta"],
+body:not(.lang-ta) .mantra-108-list[data-content-lang="en"] {
+  display: grid !important;
 }
