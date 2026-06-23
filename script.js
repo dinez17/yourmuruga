@@ -92,6 +92,7 @@ translations.ta.heroPrimary = " தரிசனம் காணுங்கள�
 translations.ta.heroSecondary = "📖 இன்றைய பிரார்த்தனை";
 
 Object.assign(translations.en, {
+  navPrayers: "Prayer",
   contentKicker: "Devotional Content",
   welcomeKicker: "Welcome Section",
   welcomeTitle: "Dear Muruga Devotees!",
@@ -172,6 +173,8 @@ const prayerListenButton = document.querySelector("[data-prayer-listen]");
 const prayerCopyButton = document.querySelector("[data-prayer-copy]");
 const prayerShareButton = document.querySelector("[data-prayer-share]");
 const prayerFeedback = document.querySelector("#prayer-feedback");
+const mantraCopyButton = document.querySelector("[data-mantra-copy]");
+const mantraFeedback = document.querySelector("#mantra-feedback");
 const themeNames = [
   "divine",
   "vel",
@@ -336,9 +339,26 @@ const localizedBlocks = [
       <p>Always remind me that no sorrow is greater<br />than Your grace.</p>
       <p>Fill my heart with wisdom, courage, and faith,<br />and bless me.</p>
       <p>Om Saravanabhava!"</p>
-      <p class="vel-chant"><img src="assets/logo.png" alt="" /> Vel! Vel! Vetri Vel! <img src="assets/logo.png" alt="" /></p>
-      <p>Muruga Haro Hara!</p>
+      <p>🔱 Vel! Vel! Vetri Vel!</p>
+      <p>🦚 Muruga Haro Hara!</p>
     `
+  },
+  {
+    selector: ".benefits-grid",
+    en: `
+      <article>✓ Peace of mind</article>
+      <article>✓ Courage</article>
+      <article>✓ Wisdom</article>
+      <article>✓ Spiritual growth</article>
+      <article>✓ Positive thinking</article>
+      <article>✓ Self-confidence</article>
+      <article>✓ Family well-being</article>
+      <article>✓ Divine grace</article>
+    `
+  },
+  {
+    selector: ".final-prayer-quote",
+    en: `"Trust Muruga...<br />Trust yourself...<br />Keep moving forward..."`
   },
   {
     selector: ".footer-brand p",
@@ -351,7 +371,7 @@ const localizedBlocks = [
       <a href="index.html#welcome">Welcome</a>
       <a href="index.html#miracles">Miracles</a>
       <a href="arupadai-veedu.html">Six Abodes</a>
-      <a href="index.html#daily-prayer">Prayer</a>
+      <a href="prayer.html">Prayer</a>
     `
   },
   {
@@ -546,6 +566,19 @@ Object.assign(translations.en, {
     "Choose a number with faith; it may bring a new perspective and positive change into your life. Inspired by Lord Muruga's grace, this message can help you take your next step with courage and clarity.",
   heroPrimary: "🔱 Choose a Number",
   heroSecondary: " Get YourMuruga Answer",
+  prayerHeroKicker: "Daily Devotion",
+  prayerHeroTitle: "🙏 Prayer for Lord Muruga",
+  prayerHeroSubtitle: "A daily prayer for peace of mind, courage, and faith",
+  prayerHeroSmallOne: "Vel! Vel! Vetri Vel!",
+  prayerHeroSmallTwo: "Muruga Haro Hara!",
+  copyPrayerButton: "Copy Prayer",
+  sharePrayerButton: "Share Prayer",
+  dailyMantraKicker: "Daily Mantra",
+  dailyMantraTitle: "🔱 Today's Murugan Mantra",
+  dailyMantraDescription: "Chant this mantra 108 times daily to receive peace of mind, courage, and spiritual strength.",
+  copyMantraButton: "Copy Mantra",
+  popularMantrasTitle: "Popular Murugan Mantras",
+  benefitsTitle: "Benefits of Chanting Lord Muruga's Name",
   popupKicker: "Your Muruga",
   popupTitle: "Today Muruga's Message For You",
   popupText:
@@ -558,12 +591,26 @@ Object.assign(translations.en, {
 });
 
 Object.assign(translations.ta, {
+  navPrayers: "பிரார்த்தனை",
   heroEyebrow: "ஒரு எண் மட்டுமல்ல... உங்கள் வாழ்க்கையை மாற்றக்கூடிய ஒரு வழிகாட்டுதல்.",
   heroTitle: "YourMuruga.com",
   heroCopy:
     "நம்பிக்கையுடன் ஒரு எண்ணைத் தேர்ந்தெடுங்கள்; அது உங்கள் வாழ்க்கையில் ஒரு புதிய பார்வையையும் நேர்மறையான மாற்றத்தையும் உருவாக்கலாம். முருகப்பெருமானின் அருளால் ஊக்கமளிக்கப்பட்ட அந்த செய்தி, உங்கள் அடுத்த அடியை தைரியத்துடனும் தெளிவுடனும் எடுக்க உதவும்.",
   heroPrimary: "Choose a Number",
   heroSecondary: "Get Your Muruga Answer",
+  prayerHeroKicker: "தினசரி பக்தி",
+  prayerHeroTitle: "🙏 முருகப்பெருமானுக்கான பிரார்த்தனை",
+  prayerHeroSubtitle: "மன அமைதி, தைரியம் மற்றும் நம்பிக்கைக்கான தினசரி பிரார்த்தனை",
+  prayerHeroSmallOne: "வேல்! வேல்! வெற்றி வேல்!",
+  prayerHeroSmallTwo: "முருகா ஹரோ ஹரா!",
+  copyPrayerButton: "Copy Prayer",
+  sharePrayerButton: "Share Prayer",
+  dailyMantraKicker: "தினசரி மந்திரம்",
+  dailyMantraTitle: "🔱 இன்றைய முருகன் மந்திரம்",
+  dailyMantraDescription: "இந்த மந்திரத்தை தினமும் 108 முறை ஜபித்து மன அமைதி, தைரியம் மற்றும் ஆன்மீக சக்தியை பெறுங்கள்.",
+  copyMantraButton: "Copy Mantra",
+  popularMantrasTitle: "Popular Murugan Mantras",
+  benefitsTitle: "முருகப்பெருமானின் நாமத்தை ஜபிப்பதன் பலன்கள்",
   popupKicker: "YourMuruga.com",
   popupTitle: "இன்று முருகன் உங்களுக்கு சொல்லும் செய்தி",
   popupText:
@@ -753,6 +800,18 @@ function setPrayerFeedback(message) {
   }, 2400);
 }
 
+function setMantraFeedback(message) {
+  if (!mantraFeedback) {
+    return;
+  }
+
+  mantraFeedback.textContent = message;
+  window.clearTimeout(setMantraFeedback.timeoutId);
+  setMantraFeedback.timeoutId = window.setTimeout(() => {
+    mantraFeedback.textContent = "";
+  }, 2400);
+}
+
 function playBellSound() {
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   if (!AudioContext) {
@@ -823,6 +882,16 @@ prayerShareButton?.addEventListener("click", async () => {
     setPrayerFeedback("Sharing is unavailable. Prayer copied.");
   } catch {
     setPrayerFeedback("Share cancelled.");
+  }
+});
+
+mantraCopyButton?.addEventListener("click", async () => {
+  const mantra = document.querySelector("#daily-mantra")?.textContent.trim() || "";
+  try {
+    await navigator.clipboard.writeText(mantra);
+    setMantraFeedback("Mantra copied.");
+  } catch {
+    setMantraFeedback("Copy failed.");
   }
 });
 
