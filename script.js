@@ -94,9 +94,9 @@ translations.ta.heroSecondary = "📖 இன்றைய பிரார்த�
 Object.assign(translations.en, {
   contentKicker: "Devotional Content",
   welcomeKicker: "Welcome Section",
-  welcomeTitle: "Welcome to the World of Murugan's Grace",
+  welcomeTitle: "Dear Muruga Devotees!",
   welcomeCopy:
-    "Sri Murugan, cherished as the beloved deity of Tamil hearts, is praised as the form of wisdom, courage, victory, and spiritual light. Through this website, you can discover Murugan's sacred temples, devotional songs, prayers, and rare spiritual insights.",
+    "Welcome to the divine world of Your Muruga — the symbol of wisdom, courage, victory, and grace. Muruga loves you. Your heart is seeking Him. His blessings are with you. May Muruga's grace guide your path.",
   quoteKicker: "Daily Divine Quote",
   quoteTitle: "🌸 Today's Murugan Blessing",
   quoteText:
@@ -111,9 +111,9 @@ Object.assign(translations.en, {
 Object.assign(translations.ta, {
   contentKicker: "பக்தி உள்ளடக்கம்",
   welcomeKicker: "வரவேற்பு பகுதி",
-  welcomeTitle: "வருக! முருகனின் அருள் உலகிற்கு",
+  welcomeTitle: "அன்பு முருக பக்தர்களே!",
   welcomeCopy:
-    "தமிழர்களின் இதய தெய்வமாக விளங்கும் ஸ்ரீ முருகப் பெருமான், அறிவு, தைரியம், வெற்றி மற்றும் ஆன்மிக ஒளியின் வடிவமாக போற்றப்படுகிறார். இத்தளத்தின் மூலம் முருகனின் திருத்தலங்கள், பக்திப் பாடல்கள், பிரார்த்தனைகள் மற்றும் அரிய தகவல்களை அறிந்து கொள்ளலாம்.",
+    "அறிவு, தைரியம், வெற்றி மற்றும் அருளின் வடிவமான ஸ்ரீ முருகப் பெருமானின் இணையதளத்திற்கு உங்களை அன்புடன் வரவேற்கிறோம். நீங்கள் இங்கு வந்திருப்பது முருகனின் அருளால்; அவரது அருள் உங்கள் வாழ்வை ஒளிரச் செய்யும் தருணம் இது.",
   quoteKicker: "தினசரி அருள்வாக்கு",
   quoteTitle: "🌸 இன்றைய முருகன் அருள்வாக்கு",
   quoteText:
@@ -144,7 +144,11 @@ Object.assign(translations.ta, {
 });
 
 const languageButtons = document.querySelectorAll(".lang-button");
-const themeSelect = document.querySelector("#theme-select");
+const themeButtons = document.querySelectorAll("[data-theme]");
+const themePicker = document.querySelector(".theme-picker");
+const themePickerToggle = document.querySelector(".theme-picker-toggle");
+const languagePicker = document.querySelector(".language-picker");
+const languagePickerToggle = document.querySelector(".language-picker-toggle");
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
@@ -183,15 +187,14 @@ const localizedBlocks = [
     en: `
       <h2>Dear Muruga Devotees!</h2>
       <p>
-        Sri Muruga, cherished as the beloved deity of Tamil hearts, is worshipped as the embodiment of wisdom, courage, victory, and spiritual light. We warmly welcome you to this website dedicated to Muruga, the peacock-rider, the bearer of the Vel, and the divine consort of Valli and Deivanai.
+        Welcome to the divine world of Sri Muruga — the symbol of wisdom, courage, victory, and grace.
       </p>
-      <p>You are here because —</p>
       <ul class="welcome-blessing-list">
         <li>Muruga loves you.</li>
         <li>Your heart is seeking Him.</li>
-        <li>This is the moment His grace reaches you.</li>
+        <li>His blessings are with you.</li>
       </ul>
-      <p class="welcome-closing">Welcome to the world of Muruga's grace.</p>
+      <p class="welcome-closing">May Muruga's grace guide your path.</p>
     `
   },
   {
@@ -579,16 +582,47 @@ function setTheme(theme) {
     document.body.classList.toggle(`theme-${themeName}`, themeName === selectedTheme);
   });
 
-  if (themeSelect) {
-    themeSelect.value = selectedTheme;
-  }
+  themeButtons.forEach((button) => {
+    const isActive = button.dataset.theme === selectedTheme;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
 
   localStorage.setItem("yourMurugaTheme", selectedTheme);
 }
 
-themeSelect?.addEventListener("change", () => {
-  setTheme(themeSelect.value);
-  setMenuOpen(false);
+function setThemePickerOpen(isOpen) {
+  themePicker?.classList.toggle("open", isOpen);
+  themePickerToggle?.setAttribute("aria-expanded", String(isOpen));
+}
+
+function setLanguagePickerOpen(isOpen) {
+  languagePicker?.classList.toggle("open", isOpen);
+  languagePickerToggle?.setAttribute("aria-expanded", String(isOpen));
+}
+
+themePickerToggle?.addEventListener("click", () => {
+  const shouldOpen = !themePicker?.classList.contains("open");
+  setThemePickerOpen(shouldOpen);
+  if (shouldOpen) {
+    setLanguagePickerOpen(false);
+  }
+});
+
+languagePickerToggle?.addEventListener("click", () => {
+  const shouldOpen = !languagePicker?.classList.contains("open");
+  setLanguagePickerOpen(shouldOpen);
+  if (shouldOpen) {
+    setThemePickerOpen(false);
+  }
+});
+
+themeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setTheme(button.dataset.theme);
+    setThemePickerOpen(false);
+    setMenuOpen(false);
+  });
 });
 
 setTheme(localStorage.getItem("yourMurugaTheme") || "divine");
@@ -605,6 +639,16 @@ menuToggle?.addEventListener("click", () => {
 window.matchMedia("(min-width: 621px)").addEventListener("change", (event) => {
   if (event.matches) {
     setMenuOpen(false);
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (themePicker && !themePicker.contains(event.target)) {
+    setThemePickerOpen(false);
+  }
+
+  if (languagePicker && !languagePicker.contains(event.target)) {
+    setLanguagePickerOpen(false);
   }
 });
 
@@ -819,6 +863,7 @@ function setLanguage(language) {
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setLanguage(button.dataset.lang);
+    setLanguagePickerOpen(false);
     setMenuOpen(false);
   });
 });
@@ -972,6 +1017,8 @@ messagePopup?.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
+    setThemePickerOpen(false);
+    setLanguagePickerOpen(false);
     closeDevotionPopup();
     closeLoadingPopup();
     closeMessagePopup();

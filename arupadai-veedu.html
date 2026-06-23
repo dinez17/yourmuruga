@@ -40,21 +40,24 @@
           <a href="arupadai-veedu.html" class="active" aria-current="page" data-i18n="navArupadai">ஆறுபடை வீடுகள்</a>
         </nav>
 
-        <label class="theme-switch" for="theme-select">
-          <span>Theme</span>
-          <select id="theme-select" class="theme-select" aria-label="Theme colour">
-            <option value="divine">Divine Gold & Blue</option>
-            <option value="vel">Murugan Vel</option>
-            <option value="peacock">Sacred Peacock</option>
-            <option value="kumkum">Kumkum & Sandalwood</option>
-            <option value="celestial">Celestial Murugan</option>
-            <option value="pure">Pure Spiritual White</option>
-          </select>
-        </label>
+        <div class="theme-picker">
+          <button class="theme-picker-toggle" type="button" aria-expanded="false" aria-controls="theme-options" aria-label="Choose colour theme" title="Choose colour theme">🎨</button>
+          <div class="theme-options" id="theme-options" role="group" aria-label="Colour themes">
+            <button class="theme-swatch swatch-divine" type="button" data-theme="divine" aria-label="Divine Gold and Deep Blue" title="Divine Gold and Deep Blue"></button>
+            <button class="theme-swatch swatch-vel" type="button" data-theme="vel" aria-label="Murugan Vel" title="Murugan Vel"></button>
+            <button class="theme-swatch swatch-peacock" type="button" data-theme="peacock" aria-label="Sacred Peacock" title="Sacred Peacock"></button>
+            <button class="theme-swatch swatch-kumkum" type="button" data-theme="kumkum" aria-label="Kumkum and Sandalwood" title="Kumkum and Sandalwood"></button>
+            <button class="theme-swatch swatch-celestial" type="button" data-theme="celestial" aria-label="Celestial Murugan" title="Celestial Murugan"></button>
+            <button class="theme-swatch swatch-pure" type="button" data-theme="pure" aria-label="Pure Spiritual White" title="Pure Spiritual White"></button>
+          </div>
+        </div>
 
-        <div class="language-switch" aria-label="Language">
-          <button class="lang-button" type="button" data-lang="en">EN</button>
-          <button class="lang-button active" type="button" data-lang="ta">தமிழ்</button>
+        <div class="language-picker">
+          <button class="language-picker-toggle" type="button" aria-expanded="false" aria-controls="language-options" aria-label="Choose language" title="Choose language">🌐</button>
+          <div class="language-options" id="language-options" role="group" aria-label="Language">
+            <button class="lang-button" type="button" data-lang="en">EN</button>
+            <button class="lang-button active" type="button" data-lang="ta">தமிழ்</button>
+          </div>
         </div>
       </div>
     </header>
