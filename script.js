@@ -1,6 +1,8 @@
 const translations = {
   en: {
     brandTag: "Always with you!",
+    navHome: "Home",
+    navArupadai: "Arupadai Veedu",
     navPrayers: "Prayers",
     navTemples: "Sacred Places",
     navFestivals: "Festivals",
@@ -41,6 +43,8 @@ const translations = {
   },
   ta: {
     brandTag: "எப்போதும் உன்னோடு!",
+    navHome: "முகப்பு",
+    navArupadai: "ஆறுபடை வீடுகள்",
     navPrayers: "பிரார்த்தனை",
     navTemples: "புனித தலங்கள்",
     navFestivals: "திருவிழாக்கள்",
@@ -234,23 +238,10 @@ const localizedBlocks = [
     `
   },
   {
-    selector: "#how-it-works .home-wrap",
-    en: `
-      <h2>How does YourMuruga.com work?</h2>
-      <ol class="steps-list">
-        <li>Close your eyes for one minute.</li>
-        <li>Think of your question or prayer.</li>
-        <li>Pray to Muruga with your whole heart.</li>
-        <li>Choose a number from 1 to 100.</li>
-        <li>Receive Muruga's grace message.</li>
-      </ol>
-    `
-  },
-  {
     selector: ".arupadai-intro",
     en: `
       <p class="section-kicker">Six Sacred Abodes</p>
-      <h2>Lord Muruga's Arupadai Veedu</h2>
+      <h1>Lord Muruga's Arupadai Veedu</h1>
       <h3>What is Arupadai Veedu?</h3>
       <p>
         The six sacred temples in Tamil Nadu that are especially associated with Lord Muruga are revered as the Arupadai Veedu. These six places reflect different stages of Muruga's divine life and sacred legends. Tamil tradition considers visiting them highly auspicious.
@@ -353,11 +344,11 @@ const localizedBlocks = [
   {
     selector: ".footer-links",
     en: `
-      <a href="#home">Home</a>
-      <a href="#welcome">Welcome</a>
-      <a href="#miracles">Miracles</a>
-      <a href="#arupadai-veedu">Six Abodes</a>
-      <a href="#daily-prayer">Prayer</a>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#welcome">Welcome</a>
+      <a href="index.html#miracles">Miracles</a>
+      <a href="arupadai-veedu.html">Six Abodes</a>
+      <a href="index.html#daily-prayer">Prayer</a>
     `
   },
   {
@@ -546,10 +537,10 @@ Object.assign(translations.ta, {
 });
 
 Object.assign(translations.en, {
-  heroEyebrow: "More than a number...\nGuidance...\nNew hope...",
+  heroEyebrow: "Not just a number... guidance that can change your life.",
   heroTitle: "YourMuruga",
   heroCopy:
-    "During life's challenges, confusion, and important decisions, receive a meaningful message inspired by Lord Muruga's wisdom.",
+    "Choose a number with faith; it may bring a new perspective and positive change into your life. Inspired by Lord Muruga's grace, this message can help you take your next step with courage and clarity.",
   heroPrimary: "🔱 Choose a Number",
   heroSecondary: " Get YourMuruga Answer",
   popupKicker: "Your Muruga",
@@ -564,10 +555,10 @@ Object.assign(translations.en, {
 });
 
 Object.assign(translations.ta, {
-  heroEyebrow: "ஒரு எண் மட்டுமல்ல...                        ஒரு வழிகாட்டுதல்...                             ஒரு புதிய நம்பிக்கை...",
+  heroEyebrow: "ஒரு எண் மட்டுமல்ல... உங்கள் வாழ்க்கையை மாற்றக்கூடிய ஒரு வழிகாட்டுதல்.",
   heroTitle: "YourMuruga.com",
   heroCopy:
-    "வாழ்க்கையின் சவால்கள், குழப்பங்கள் மற்றும் முக்கியமான முடிவுகளின் நேரங்களில், முருகப்பெருமானின் ஞானத்தால் ஊக்கமளிக்கப்பட்ட ஒரு அர்த்தமுள்ள செய்தியைப் பெறுங்கள்.",
+    "நம்பிக்கையுடன் ஒரு எண்ணைத் தேர்ந்தெடுங்கள்; அது உங்கள் வாழ்க்கையில் ஒரு புதிய பார்வையையும் நேர்மறையான மாற்றத்தையும் உருவாக்கலாம். முருகப்பெருமானின் அருளால் ஊக்கமளிக்கப்பட்ட அந்த செய்தி, உங்கள் அடுத்த அடியை தைரியத்துடனும் தெளிவுடனும் எடுக்க உதவும்.",
   heroPrimary: "Choose a Number",
   heroSecondary: "Get Your Muruga Answer",
   popupKicker: "YourMuruga.com",

@@ -251,6 +251,12 @@ body.lang-ta {
   font-size: 13px;
 }
 
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active {
+  color: var(--gold);
+}
+
 .language-switch {
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
@@ -880,12 +886,17 @@ body.lang-ta .hero-copy {
   max-width: 980px;
 }
 
+.arupadai-intro h1,
 .arupadai-intro h2,
 .arupadai-summary h3 {
   margin: 0;
   color: var(--ink);
   font-size: clamp(22px, 2.3vw, 32px);
   line-height: 1.25;
+}
+
+.inner-page-main {
+  min-height: calc(100vh - 78px);
 }
 
 .arupadai-intro h3 {
@@ -2023,6 +2034,20 @@ body.lang-ta .hero-copy {
     flex-direction: column;
     gap: 8px;
     padding: 8px 0 4px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background: rgba(255, 248, 240, 0.08);
   }
 
   .site-header.menu-open .header-actions {
