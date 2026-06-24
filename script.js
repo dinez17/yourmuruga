@@ -258,10 +258,10 @@ const localizedBlocks = [
     selector: ".arupadai-accordion",
     en: `
       <details open>
-        <summary>1. Palani — Dhandayuthapani Temple</summary>
+        <summary>1. Thiruparankundram — Subramaniaswamy Temple</summary>
         <div class="arupadai-panel">
-          <p>Muruga stands here as Dhandayuthapani. When Ganesha won the fruit of wisdom, Muruga renounced ornaments and worldly pride, carrying only a staff, and stood in penance on Palani Hill. Devotees believe He grants sincere prayers.</p>
-          <img src="assets/palani.jpg" alt="Palani Dhandayuthapani Temple" />
+          <p>This is the first among the six sacred abodes. After defeating Surapadman, Muruga married Deivanai, daughter of Indra, here. The rock-cut temple stands as a wonder of sacred architecture.</p>
+          <img src="assets/thiruparankundram.jpg" alt="Thiruparankundram Subramaniaswamy Temple" />
         </div>
       </details>
       <details>
@@ -272,31 +272,31 @@ const localizedBlocks = [
         </div>
       </details>
       <details>
-        <summary>3. Swamimalai — Swaminatha Swamy Temple</summary>
+        <summary>3. Palani — Dhandayuthapani Temple</summary>
+        <div class="arupadai-panel">
+          <p>Muruga stands here as Dhandayuthapani. When Ganesha won the fruit of wisdom, Muruga renounced ornaments and worldly pride, carrying only a staff, and stood in penance on Palani Hill. Devotees believe He grants sincere prayers.</p>
+          <img src="assets/palani.jpg" alt="Palani Dhandayuthapani Temple" />
+        </div>
+      </details>
+      <details>
+        <summary>4. Swamimalai — Swaminatha Swamy Temple</summary>
         <div class="arupadai-panel">
           <p>Here, child Muruga taught the meaning of the Pranava mantra Om even to Lord Shiva. For this reason, He is called Swaminathan, the Lord who became the guru of His own father.</p>
           <img src="assets/swamimalai.jpg" alt="Swamimalai Swaminatha Swamy Temple" />
         </div>
       </details>
       <details>
-        <summary>4. Tiruttani — Thanigachalanathar Temple</summary>
+        <summary>5. Tiruttani — Thanigachalanathar Temple</summary>
         <div class="arupadai-panel">
           <p>After Soorasamharam, Muruga came here to cool the heat of battle and gain peace. This sacred place is also associated with His love and marriage with Valli.</p>
           <img src="assets/tiruthani.jpg" alt="Tiruttani Thanigachalanathar Temple" />
         </div>
       </details>
       <details>
-        <summary>5. Pazhamudircholai — Kalyanasundarar Temple</summary>
+        <summary>6. Pazhamudircholai — Kalyanasundarar Temple</summary>
         <div class="arupadai-panel">
           <p>This beautiful hill shrine near Madurai is where Muruga blesses devotees with Valli and Deivanai. Surrounded by forests and streams, it is considered a beloved natural abode of Muruga.</p>
           <img src="assets/pazhamudircholai.jpg" alt="Pazhamudircholai Kalyanasundarar Temple" />
-        </div>
-      </details>
-      <details>
-        <summary>6. Thiruparankundram — Subramaniaswamy Temple</summary>
-        <div class="arupadai-panel">
-          <p>This is the first among the six sacred abodes. After defeating Surapadman, Muruga married Deivanai, daughter of Indra, here. The rock-cut temple stands as a wonder of sacred architecture.</p>
-          <img src="assets/thiruparankundram.jpg" alt="Thiruparankundram Subramaniaswamy Temple" />
         </div>
       </details>
     `
@@ -305,14 +305,14 @@ const localizedBlocks = [
     selector: ".arupadai-summary",
     en: `
       <h3>Essence of the Six Abodes</h3>
-      <div class="arupadai-summary-grid">
-        <span>Palani</span><strong>Renunciation and detachment</strong>
-        <span>Tiruchendur</span><strong>Victory and courage</strong>
-        <span>Swamimalai</span><strong>Wisdom and teaching</strong>
-        <span>Tiruttani</span><strong>Peace and love</strong>
-        <span>Pazhamudircholai</span><strong>Grace and nature</strong>
-        <span>Thiruparankundram</span><strong>Marriage and beginning</strong>
-      </div>
+      <ol class="arupadai-summary-list">
+        <li><strong>Thiruparankundram (Madurai)</strong><span>The sacred place where Muruga married Deivanai.</span></li>
+        <li><strong>Tiruchendur (Thoothukudi)</strong><span>The seaside shrine where Muruga defeated Surapadman.</span></li>
+        <li><strong>Palani (Dindigul)</strong><span>The hill temple where Muruga appears as the fruit of wisdom.</span></li>
+        <li><strong>Swamimalai (Kumbakonam)</strong><span>The place where Muruga taught the Pranava mantra to Lord Shiva.</span></li>
+        <li><strong>Tiruttani (Tiruvallur)</strong><span>The abode where Lord Muruga's anger cooled and He blessed devotees.</span></li>
+        <li><strong>Pazhamudircholai (Madurai)</strong><span>The nature-filled sacred grove praised by Avvaiyar.</span></li>
+      </ol>
     `
   },
   {
