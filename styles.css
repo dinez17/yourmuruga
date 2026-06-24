@@ -396,6 +396,130 @@ body:not(.lang-ta) .mantra-108-list[data-content-lang="en"] {
   display: grid !important;
 }
 
+body.lang-ta .kavasam-link-card [data-content-lang="en"],
+body:not(.lang-ta) .kavasam-link-card [data-content-lang="ta"] {
+  display: none !important;
+}
+
+body.lang-ta .kavasam-link-card p[data-content-lang="ta"],
+body.lang-ta .kavasam-link-card h2[data-content-lang="ta"],
+body:not(.lang-ta) .kavasam-link-card p[data-content-lang="en"],
+body:not(.lang-ta) .kavasam-link-card h2[data-content-lang="en"] {
+  display: block !important;
+}
+
+body.lang-ta .kavasam-link-card a[data-content-lang="ta"],
+body:not(.lang-ta) .kavasam-link-card a[data-content-lang="en"] {
+  display: inline-flex !important;
+}
+
+.kavasam-link-section {
+  background: var(--soft-section-bg);
+}
+
+.kavasam-link-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  border: 1px solid rgba(7, 27, 36, 0.12);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  padding: clamp(22px, 3vw, 34px);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 54px rgba(3, 55, 76, 0.12);
+}
+
+.kavasam-link-card h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(22px, 2.4vw, 34px);
+  line-height: 1.25;
+}
+
+.kavasam-link-card p:not(.section-kicker) {
+  margin: 10px 0 0;
+  color: #315260;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.7;
+}
+
+.kavasam-view-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  text-decoration: none;
+}
+
+.kavasam-page-main {
+  background: var(--soft-section-bg);
+}
+
+.kavasam-hero {
+  padding: clamp(70px, 8vw, 110px) 20px clamp(42px, 5vw, 70px);
+  color: #fff8e7;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(250, 204, 21, 0.38), transparent 34%),
+    linear-gradient(135deg, var(--header-bg), var(--peacock-neck));
+}
+
+.kavasam-hero h1 {
+  margin: 10px 0 12px;
+  font-size: clamp(30px, 5vw, 58px);
+  line-height: 1.12;
+}
+
+.kavasam-hero p:not(.section-kicker) {
+  max-width: 780px;
+  margin: 0 auto;
+  color: rgba(255, 248, 231, 0.9);
+  font-size: clamp(14px, 1.25vw, 18px);
+  line-height: 1.7;
+}
+
+.kavasam-reader-section {
+  background: var(--soft-section-bg);
+}
+
+.kavasam-reader-card {
+  border: 1px solid rgba(7, 27, 36, 0.12);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 34px);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 54px rgba(3, 55, 76, 0.12);
+}
+
+.kavasam-reader-card h2 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: clamp(21px, 2.2vw, 32px);
+}
+
+.kavasam-reader-card pre {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #102a3a;
+  font-family: "Noto Sans Tamil", "Inter", sans-serif;
+  font-size: clamp(14px, 1.05vw, 16px);
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+@media (max-width: 620px) {
+  .kavasam-link-card {
+    grid-template-columns: 1fr;
+  }
+
+  .kavasam-view-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
 .prayer-hero {
   min-height: 420px !important;
   padding: 72px 20px 58px !important;
