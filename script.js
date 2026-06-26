@@ -610,11 +610,11 @@ Object.assign(translations.ta, {
   dailyMantraDescription: "இந்த மந்திரத்தை தினமும் 108 முறை ஜபித்து மன அமைதி, தைரியம் மற்றும் ஆன்மீக சக்தியை பெறுங்கள்.",
   copyMantraButton: "Copy Mantra",
   popularMantrasTitle: "Popular Murugan Mantras",
-  benefitsTitle: "முருகப்பெருமானின் நாமத்தை ஜபிப்பதன் பலன்கள்",
+  benefitsTitle: "முருகப்பெருமானின் நாமத்தை பாராயணம் செய்வதன் பலன்கள்",
   popupKicker: "YourMuruga.com",
   popupTitle: "இன்று முருகன் உங்களுக்கு சொல்லும் செய்தி",
   popupText:
-    "கண்களை மூடி முருகனை நினைத்து பிரார்த்தனை செய்யுங்கள்.\n1�100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்.\nஉங்கள் அருள் செய்தியை பெறுங்கள்.",
+    "கண்களை மூடி முருகனை நினைத்து பிரார்த்தனை செய்யுங்கள்.\n1-100 வரை ஒரு எண்ணை தேர்வு செய்யுங்கள்.\nஉங்கள் அருள் செய்தியை பெறுங்கள்.",
   popupInputLabel: "fdsf",
   popupButton: "Click here for Answer",
   popupLoading: "முருகன் அருள் செய்தி பெறப்படுகிறது...",
