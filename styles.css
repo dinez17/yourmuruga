@@ -2506,8 +2506,8 @@ body.lang-ta .hero-copy {
   text-align: center;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.44) 28%, transparent 52%),
-    url("assets/logo.png") center 42% / min(285px, 68vw) no-repeat,
+    radial-gradient(circle at 50% 39%, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.5) 32%, transparent 58%),
+    url("assets/logo.png") center 39% / min(250px, 60vw) no-repeat,
     linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 231, 0.9));
 }
 
@@ -2536,19 +2536,19 @@ body.lang-ta .hero-copy {
 }
 
 .guidance-popup-card > p[data-i18n="popupText"] {
-  max-width: 390px;
-  margin: 0 auto;
+  max-width: 440px;
+  margin: 22px auto 0;
   color: #17313d;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.65;
+  line-height: 1.58;
   text-align: center;
   white-space: pre-line;
 }
 
 .guidance-popup-card .message-form {
-  max-width: 360px;
-  margin: 16px auto 0;
+  max-width: 350px;
+  margin: 26px auto 0;
   padding-top: 0;
   border-top: 0;
 }
@@ -2559,15 +2559,21 @@ body.lang-ta .hero-copy {
 
 .guidance-popup-card .message-controls {
   grid-template-columns: 1fr;
-  gap: 10px;
-  max-width: 280px;
-  margin: 8px auto 0;
+  gap: 12px;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .guidance-popup-card .message-controls input,
 .guidance-popup-card .message-controls button {
-  min-height: 40px;
+  min-height: 46px;
   text-align: center;
+}
+
+.guidance-popup-card .message-controls input::placeholder {
+  color: rgba(15, 23, 42, 0.72);
+  font-weight: 800;
+  opacity: 1;
 }
 
 .guidance-popup-card .message-error {
@@ -2645,6 +2651,17 @@ body.lang-ta .hero-copy {
   padding: 0 12px;
   color: var(--ink);
   background: #fffaf0;
+}
+
+.message-controls input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.message-controls input[type="number"]::-webkit-outer-spin-button,
+.message-controls input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
 }
 
 .message-controls button {
