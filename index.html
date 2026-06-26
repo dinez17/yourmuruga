@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ta">
   <head>
     <meta charset="utf-8" />
@@ -17,42 +17,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="lang-ta theme-divine">
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Your Muruga home">
-        <span class="brand-mark">
-          <img src="assets/logo.png" alt="" />
-        </span>
-        <span>
-          <strong>Your Muruga</strong>
-          <small data-i18n="brandTag">தமிழ் மற்றும் ஆங்கில பக்தி</small>
-        </span>
-      </a>
+    <div id="site-navbar"></div>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="header-actions" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="header-actions" id="header-actions">
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#home" class="active" aria-current="page" data-i18n="navHome">முகப்பு</a>
-          <a href="arupadai-veedu.html" data-i18n="navArupadai">ஆறுபடை வீடுகள்</a>
-          <a href="prayer.html" data-i18n="navPrayers">பிரார்த்தனை</a>
-        </nav>
-
-        
-        <div class="language-picker">
-          <button class="language-picker-toggle" type="button" aria-expanded="false" aria-controls="language-options" aria-label="Choose language" title="Choose language">🌐</button>
-          <div class="language-options" id="language-options" role="group" aria-label="Language">
-            <button class="lang-button" type="button" data-lang="en">EN</button>
-            <button class="lang-button active" type="button" data-lang="ta">தமிழ்</button>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main id="home">
+<main id="home">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-slider" aria-label="Lord Muruga hero images">
           <img
@@ -214,7 +181,7 @@
 
     <div class="devotion-popup" id="devotion-popup" aria-hidden="true">
       <div class="popup-card guidance-popup-card" role="dialog" aria-modal="true" aria-labelledby="popup-title">
-        <button class="popup-close" type="button" aria-label="Close message">×</button>
+        <button class="popup-close" type="button" aria-label="Close message">&times;</button>
         <p class="section-kicker" data-i18n="popupKicker">Your Muruga Answer</p>
         
         <h3 id="popup-title" data-i18n="popupTitle">இன்று முருகன் உங்களுக்கு சொல்லும் செய்தி</h3>
@@ -244,13 +211,13 @@
 
     <div class="devotion-popup message-popup" id="message-popup" aria-hidden="true">
       <div class="popup-card message-popup-card" role="dialog" aria-modal="true" aria-labelledby="message-popup-title">
-        <button class="popup-close message-popup-close" type="button" aria-label="Close message">×</button>
+        <button class="popup-close message-popup-close" type="button" aria-label="Close message">&times;</button>
         <p class="section-kicker" data-i18n="messagePopupKicker">முருகன் அருள்வாக்கு</p>
         <h2 id="message-popup-title" data-i18n="messagePopupTitle">உங்களுக்கான அருள் செய்தி</h2>
         <div class="murugan-message large-message" id="murugan-message" aria-live="polite"></div>
       </div>
     </div>
-
+    <script src="navbar.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

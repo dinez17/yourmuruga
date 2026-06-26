@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ta">
   <head>
     <meta charset="utf-8" />
@@ -17,42 +17,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="lang-ta theme-divine">
-    <header class="site-header">
-      <a class="brand" href="index.html#home" aria-label="Your Muruga home">
-        <span class="brand-mark">
-          <img src="assets/logo.png" alt="" />
-        </span>
-        <span>
-          <strong>Your Muruga</strong>
-          <small data-i18n="brandTag">தமிழ் மற்றும் ஆங்கில பக்தி</small>
-        </span>
-      </a>
+    <div id="site-navbar"></div>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="header-actions" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="header-actions" id="header-actions">
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#home" data-i18n="navHome">முகப்பு</a>
-          <a href="arupadai-veedu.html" class="active" aria-current="page" data-i18n="navArupadai">ஆறுபடை வீடுகள்</a>
-          <a href="prayer.html" data-i18n="navPrayers">பிரார்த்தனை</a>
-        </nav>
-
-
-        <div class="language-picker">
-          <button class="language-picker-toggle" type="button" aria-expanded="false" aria-controls="language-options" aria-label="Choose language" title="Choose language">🌐</button>
-          <div class="language-options" id="language-options" role="group" aria-label="Language">
-            <button class="lang-button" type="button" data-lang="en">EN</button>
-            <button class="lang-button active" type="button" data-lang="ta">தமிழ்</button>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main class="inner-page-main">
+<main class="inner-page-main">
       <section class="section arupadai-section" id="arupadai-veedu">
         <div class="home-wrap arupadai-wrap">
           <div class="arupadai-intro">
@@ -159,7 +126,8 @@
       <p class="footer-note">ஓம் சரவணபவா. வேல்! வேல்! வெற்றி வேல்!</p>
       <p class="footer-copy">© 2026 Your Muruga. All rights reserved.</p>
     </footer>
-
+    <script src="navbar.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
+

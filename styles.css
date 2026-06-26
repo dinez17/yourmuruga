@@ -888,6 +888,52 @@ body.lang-ta {
   color: var(--gold);
 }
 
+.social-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.social-links a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 248, 240, 0.22);
+  border-radius: 50%;
+  color: #fff8f0;
+  background: rgba(255, 248, 240, 0.1);
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(255, 248, 240, 0.18);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.social-links a:nth-child(1) span {
+  font-size: 18px;
+  transform: translateY(1px);
+}
+
+.social-links a:nth-child(2) span {
+  font-size: 20px;
+}
+
+.social-links a:nth-child(3) span {
+  font-size: 13px;
+  transform: translateX(1px);
+}
+
 .header-actions {
   display: inline-flex;
   align-items: center;
@@ -2745,20 +2791,30 @@ body.lang-ta .hero-copy {
 
 .popup-close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   border: 0;
   border-radius: 999px;
   color: #fff;
-  background: var(--peacock-neck);
-  font: inherit;
-  font-size: 22px;
+  background: #0f172a;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.22);
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
   line-height: 1;
   cursor: pointer;
+  z-index: 4;
+}
+
+.popup-close:hover,
+.popup-close:focus-visible {
+  color: #071b24;
+  background: var(--gold);
+  outline: none;
 }
 
 @media (max-width: 900px) {
@@ -2831,6 +2887,11 @@ body.lang-ta .hero-copy {
     padding: 10px 12px;
     border-radius: 6px;
     background: rgba(255, 248, 240, 0.08);
+  }
+
+  .social-links {
+    justify-content: flex-end;
+    padding: 2px 0;
   }
 
   .site-header.menu-open .header-actions {
