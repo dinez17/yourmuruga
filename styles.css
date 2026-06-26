@@ -2547,6 +2547,19 @@ body.lang-ta .hero-copy {
   text-align: center;
 }
 
+.popup-icon-label {
+  display: grid !important;
+  place-items: center;
+}
+
+.popup-icon-label img {
+  width: 86px;
+  height: 86px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 10px 22px rgba(212, 175, 55, 0.28));
+}
+
 .guidance-popup-card .message-controls {
   grid-template-columns: 1fr;
   gap: 10px;
