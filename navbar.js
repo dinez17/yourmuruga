@@ -41,11 +41,13 @@
         <div class="social-links" aria-label="Social media links">
           <a href="#" aria-label="Facebook" title="Facebook"><span aria-hidden="true">f</span></a>
           <a href="#" aria-label="Instagram" title="Instagram"><span aria-hidden="true">◎</span></a>
-          <a href="https://www.youtube.com/@yourmuruga" aria-label="YouTube" target="_blank" title="YouTube"><span aria-hidden="true">▶</span></a>
+          <a href="https://www.youtube.com/@yourmuruga" aria-label="YouTube" target="_blank" rel="noopener" title="YouTube"><span aria-hidden="true">▶</span></a>
         </div>
 
         <div class="language-picker">
-          <button class="language-picker-toggle" type="button" aria-expanded="false" aria-controls="language-options" aria-label="Choose language" title="Choose language">🌐</button>
+          <button class="language-picker-toggle" type="button" aria-expanded="false" aria-controls="language-options" aria-label="Choose language" title="Choose language">
+            <span aria-hidden="true">🌐</span>
+          </button>
           <div class="language-options" id="language-options" role="group" aria-label="Language">
             <button class="lang-button" type="button" data-lang="en">EN</button>
             <button class="lang-button active" type="button" data-lang="ta">தமிழ்</button>

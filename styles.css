@@ -413,8 +413,64 @@ body:not(.lang-ta) .kavasam-link-card a[data-content-lang="en"] {
   display: inline-flex !important;
 }
 
+body.lang-ta .gayatri-card [data-content-lang="en"],
+body:not(.lang-ta) .gayatri-card [data-content-lang="ta"] {
+  display: none !important;
+}
+
+body.lang-ta .gayatri-card p[data-content-lang="ta"],
+body.lang-ta .gayatri-card h2[data-content-lang="ta"],
+body:not(.lang-ta) .gayatri-card p[data-content-lang="en"],
+body:not(.lang-ta) .gayatri-card h2[data-content-lang="en"] {
+  display: block !important;
+}
+
+body.lang-ta .gayatri-card .gayatri-lines[data-content-lang="ta"],
+body:not(.lang-ta) .gayatri-card .gayatri-lines[data-content-lang="en"] {
+  display: grid !important;
+}
+
 .kavasam-link-section {
   background: var(--soft-section-bg);
+}
+
+.gayatri-section {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.18), transparent 32%),
+    var(--soft-section-bg);
+}
+
+.gayatri-card {
+  max-width: 860px;
+  margin: 0 auto;
+  border: 1px solid rgba(7, 27, 36, 0.12);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  padding: clamp(24px, 4vw, 42px);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 22px 50px rgba(7, 27, 36, 0.1);
+}
+
+.gayatri-card h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 3vw, 42px);
+  line-height: 1.25;
+}
+
+.gayatri-lines {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+  color: #17313d;
+  font-size: clamp(19px, 2vw, 30px);
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.gayatri-lines p {
+  margin: 0;
 }
 
 .kavasam-link-card {
@@ -660,135 +716,6 @@ body:not(.lang-ta) .kavasam-link-card a[data-content-lang="en"] {
   color: var(--ink);
 }
 
-body.theme-vel {
-  --ink: #1a120b;
-  --muted: #6b4c2f;
-  --peacock-blue: #dc2626;
-  --peacock-teal: #dc2626;
-  --peacock-green: #ffd700;
-  --peacock-neck: #1a120b;
-  --peacock-deep: #100a06;
-  --gold: #ffd700;
-  --paper: #fff8e7;
-  --surface: rgba(255, 248, 231, 0.9);
-  --line: rgba(255, 248, 231, 0.18);
-  --page-bg:
-    radial-gradient(circle at 16% 8%, rgba(255, 215, 0, 0.2), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgba(220, 38, 38, 0.14), transparent 32%),
-    linear-gradient(135deg, #1a120b 0%, #2b1a0d 48%, #1a120b 100%);
-  --header-bg: rgba(26, 18, 11, 0.96);
-  --brand-gradient: linear-gradient(145deg, #ffd700, #dc2626, #fff8e7);
-  --button-gradient: linear-gradient(135deg, #ffd700, #fff08a);
-  --soft-section-bg:
-    radial-gradient(circle at 12% 8%, rgba(255, 215, 0, 0.12), transparent 26%),
-    linear-gradient(135deg, rgba(255, 248, 231, 0.98), rgba(255, 239, 210, 0.94));
-  --dark-section-bg: linear-gradient(135deg, rgba(26, 18, 11, 0.98), rgba(86, 28, 12, 0.92));
-  --hero-overlay-bg: linear-gradient(90deg, rgba(26, 18, 11, 0.66) 0%, rgba(26, 18, 11, 0.24) 23%, transparent 38%);
-}
-
-body.theme-peacock {
-  --ink: #052e16;
-  --muted: #386451;
-  --peacock-blue: #14b8a6;
-  --peacock-teal: #14b8a6;
-  --peacock-green: #f59e0b;
-  --peacock-neck: #052e16;
-  --peacock-deep: #031b0d;
-  --gold: #f59e0b;
-  --paper: #f8fafc;
-  --surface: rgba(248, 250, 252, 0.9);
-  --line: rgba(248, 250, 252, 0.18);
-  --page-bg:
-    radial-gradient(circle at 16% 8%, rgba(245, 158, 11, 0.18), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgba(20, 184, 166, 0.16), transparent 32%),
-    linear-gradient(135deg, #052e16 0%, #064e3b 48%, #052e16 100%);
-  --header-bg: rgba(5, 46, 22, 0.96);
-  --brand-gradient: linear-gradient(145deg, #f59e0b, #14b8a6, #f8fafc);
-  --button-gradient: linear-gradient(135deg, #f59e0b, #fcd27b);
-  --soft-section-bg:
-    radial-gradient(circle at 12% 8%, rgba(20, 184, 166, 0.12), transparent 26%),
-    linear-gradient(135deg, rgba(248, 250, 252, 0.98), rgba(236, 253, 245, 0.94));
-  --dark-section-bg: linear-gradient(135deg, rgba(5, 46, 22, 0.98), rgba(20, 184, 166, 0.82));
-  --hero-overlay-bg: linear-gradient(90deg, rgba(5, 46, 22, 0.66) 0%, rgba(5, 46, 22, 0.24) 23%, transparent 38%);
-}
-
-body.theme-kumkum {
-  --ink: #78350f;
-  --muted: #7c4a20;
-  --peacock-blue: #b91c1c;
-  --peacock-teal: #b91c1c;
-  --peacock-green: #fbbf24;
-  --peacock-neck: #78350f;
-  --peacock-deep: #451a03;
-  --gold: #fbbf24;
-  --paper: #fff7ed;
-  --surface: rgba(255, 247, 237, 0.92);
-  --line: rgba(120, 53, 15, 0.16);
-  --page-bg:
-    radial-gradient(circle at 16% 8%, rgba(251, 191, 36, 0.28), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgba(185, 28, 28, 0.12), transparent 32%),
-    linear-gradient(135deg, #fff7ed 0%, #ffedd5 48%, #fff7ed 100%);
-  --header-bg: rgba(120, 53, 15, 0.96);
-  --brand-gradient: linear-gradient(145deg, #fbbf24, #b91c1c, #fff7ed);
-  --button-gradient: linear-gradient(135deg, #fbbf24, #ffe08a);
-  --soft-section-bg:
-    radial-gradient(circle at 12% 8%, rgba(251, 191, 36, 0.18), transparent 26%),
-    linear-gradient(135deg, rgba(255, 247, 237, 0.98), rgba(255, 237, 213, 0.94));
-  --dark-section-bg: linear-gradient(135deg, rgba(120, 53, 15, 0.96), rgba(185, 28, 28, 0.9));
-  --hero-overlay-bg: linear-gradient(90deg, rgba(120, 53, 15, 0.62) 0%, rgba(120, 53, 15, 0.24) 23%, transparent 38%);
-}
-
-body.theme-celestial {
-  --ink: #020617;
-  --muted: #475569;
-  --peacock-blue: #7c3aed;
-  --peacock-teal: #7c3aed;
-  --peacock-green: #facc15;
-  --peacock-neck: #020617;
-  --peacock-deep: #01030c;
-  --gold: #facc15;
-  --paper: #e0f2fe;
-  --surface: rgba(224, 242, 254, 0.9);
-  --line: rgba(224, 242, 254, 0.18);
-  --page-bg:
-    radial-gradient(circle at 16% 8%, rgba(250, 204, 21, 0.2), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgba(124, 58, 237, 0.22), transparent 32%),
-    linear-gradient(135deg, #020617 0%, #11113a 48%, #020617 100%);
-  --header-bg: rgba(2, 6, 23, 0.96);
-  --brand-gradient: linear-gradient(145deg, #facc15, #7c3aed, #e0f2fe);
-  --button-gradient: linear-gradient(135deg, #facc15, #fde68a);
-  --soft-section-bg:
-    radial-gradient(circle at 12% 8%, rgba(124, 58, 237, 0.12), transparent 26%),
-    linear-gradient(135deg, rgba(224, 242, 254, 0.98), rgba(250, 245, 255, 0.94));
-  --dark-section-bg: linear-gradient(135deg, rgba(2, 6, 23, 0.98), rgba(76, 29, 149, 0.9));
-  --hero-overlay-bg: linear-gradient(90deg, rgba(2, 6, 23, 0.68) 0%, rgba(2, 6, 23, 0.26) 23%, transparent 38%);
-}
-
-body.theme-pure {
-  --ink: #374151;
-  --muted: #4b5563;
-  --peacock-blue: #dc2626;
-  --peacock-teal: #dc2626;
-  --peacock-green: #d97706;
-  --peacock-neck: #374151;
-  --peacock-deep: #1f2937;
-  --gold: #d97706;
-  --paper: #ffffff;
-  --surface: rgba(255, 255, 255, 0.94);
-  --line: rgba(55, 65, 81, 0.16);
-  --page-bg:
-    radial-gradient(circle at 16% 8%, rgba(217, 119, 6, 0.16), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgba(220, 38, 38, 0.1), transparent 32%),
-    linear-gradient(135deg, #ffffff 0%, #f9fafb 48%, #ffffff 100%);
-  --header-bg: rgba(55, 65, 81, 0.96);
-  --brand-gradient: linear-gradient(145deg, #d97706, #dc2626, #ffffff);
-  --button-gradient: linear-gradient(135deg, #d97706, #fbbf24);
-  --soft-section-bg:
-    radial-gradient(circle at 12% 8%, rgba(217, 119, 6, 0.1), transparent 26%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(249, 250, 251, 0.96));
-  --dark-section-bg: linear-gradient(135deg, rgba(55, 65, 81, 0.96), rgba(220, 38, 38, 0.86));
-  --hero-overlay-bg: linear-gradient(90deg, rgba(55, 65, 81, 0.58) 0%, rgba(55, 65, 81, 0.2) 23%, transparent 38%);
-}
 
 * {
   box-sizing: border-box;
@@ -807,6 +734,10 @@ body {
 
 body.lang-ta {
   font-family: "Noto Sans Tamil", Inter, system-ui, sans-serif;
+}
+
+[data-content-lang][hidden] {
+  display: none !important;
 }
 
 .site-header {
@@ -976,14 +907,12 @@ body.lang-ta {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-.theme-picker,
 .language-picker {
   position: relative;
   display: inline-grid;
   place-items: center;
 }
 
-.theme-picker-toggle,
 .language-picker-toggle {
   display: grid;
   place-items: center;
@@ -999,10 +928,16 @@ body.lang-ta {
   cursor: pointer;
 }
 
-.theme-picker-toggle:hover,
-.theme-picker-toggle:focus-visible,
-.theme-picker.open .theme-picker-toggle,
-.language-picker-toggle:hover,
+.language-picker-toggle {
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 248, 240, 0.1);
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
 .language-picker-toggle:focus-visible,
 .language-picker.open .language-picker-toggle {
   border-color: var(--gold);
@@ -1010,7 +945,14 @@ body.lang-ta {
   outline: none;
 }
 
-.theme-options,
+.language-picker-toggle:hover,
+.language-picker-toggle:focus-visible,
+.language-picker.open .language-picker-toggle {
+  color: var(--gold);
+  background: rgba(255, 248, 240, 0.18);
+  transform: translateY(-1px);
+}
+
 .language-options {
   position: absolute;
   top: calc(100% + 10px);
@@ -1033,35 +975,10 @@ body.lang-ta {
   padding: 8px;
 }
 
-.theme-picker.open .theme-options,
 .language-picker.open .language-options {
   display: grid;
 }
 
-.theme-swatch {
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  border: 2px solid rgba(255, 255, 255, 0.42);
-  border-radius: 50%;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.24);
-  cursor: pointer;
-  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
-}
-
-.theme-swatch:hover,
-.theme-swatch:focus-visible {
-  transform: scale(1.13);
-  border-color: #ffffff;
-  outline: none;
-}
-
-.theme-swatch.active {
-  border-color: #ffffff;
-  box-shadow:
-    0 0 0 3px var(--header-bg),
-    0 0 0 5px var(--gold);
-}
 
 .swatch-divine {
   background: linear-gradient(135deg, #0f172a 0 56%, #d4af37 56%);
@@ -2898,20 +2815,15 @@ body.lang-ta .hero-copy {
     display: flex;
   }
 
-  .theme-picker,
   .language-picker {
     justify-self: end;
   }
 
-  .theme-options,
   .language-options {
     right: 0;
     max-width: calc(100vw - 28px);
   }
 
-  .theme-options {
-    grid-template-columns: repeat(6, 28px);
-  }
 
   .brand small {
     display: none;
