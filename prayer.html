@@ -15,15 +15,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="premium-overrides.css" />
   </head>
   <body class="lang-ta">
     <div id="site-navbar"></div>
 
 <main class="prayer-page-main">
+  
       <section class="prayer-hero" aria-labelledby="prayer-page-title">
+        <div class="hero-slider" aria-label="Lord Muruga prayer hero image">
+          <img
+            class="hero-slide active"
+            src="assets/prayer.jpg"
+            alt="Lord Muruga devotional prayer scene"
+          />
+        </div>
+        <div class="hero-overlay"></div>
         <div class="prayer-hero-content">
           
-          <h1 id="prayer-page-title" data-i18n="prayerHeroTitle">முருகப்பெருமானுக்கான பிரார்த்தனை</h1>
+          <h2 id="prayer-page-title" data-i18n="prayerHeroTitle">முருகப்பெருமானுக்கான பிரார்த்தனை</h2>
           <p data-i18n="prayerHeroSubtitle">மன அமைதி, தைரியம் மற்றும் நம்பிக்கைக்கான தினசரி பிரார்த்தனை</p>
           <div class="prayer-hero-chant">
             <span data-i18n="prayerHeroSmallOne">வேல்! வேல்! வெற்றி வேல்!</span>
@@ -35,19 +45,24 @@
       <section class="section gayatri-section" aria-labelledby="gayatri-title">
         <div class="prayer-page-wrap">
           <div class="gayatri-card">
-            <p class="section-kicker" data-content-lang="ta">yourmuruga.com</p>
-            <p class="section-kicker" data-content-lang="en" hidden>yourmuruga.com</p>
-            <h2 id="gayatri-title" data-content-lang="ta">ஸ்ரீ முருகன் காயத்ரி மந்திரம்</h2>
-            <h2 data-content-lang="en" hidden>Sri Murugan Gayatri Mantra</h2>
-            <div class="gayatri-lines" data-content-lang="ta">
-              <p>ஓம் தத் புருசாய வித்மஹே</p>
-              <p>மகேஷ்வர புத்ராய தீமஹி</p>
-              <p>தந்நோ சுப்ரமண்ய ப்ரசோதயாத்</p>
+            <div class="gayatri-copy">
+              <p class="section-kicker" data-content-lang="ta">yourmuruga.com</p>
+              <p class="section-kicker" data-content-lang="en" hidden>yourmuruga.com</p>
+              <h2 id="gayatri-title" data-content-lang="ta">ஸ்ரீ முருகன் காயத்ரி மந்திரம்</h2>
+              <h2 data-content-lang="en" hidden>Sri Murugan Gayatri Mantra</h2>
+              <div class="gayatri-lines" data-content-lang="ta">
+                <p>ஓம் தத் புருசாய வித்மஹே</p>
+                <p>மகேஷ்வர புத்ராய தீமஹி</p>
+                <p>தந்நோ சுப்ரமண்ய ப்ரசோதயாத்</p>
+              </div>
+              <div class="gayatri-lines" data-content-lang="en" hidden>
+                <p>Om Tat Purushaya Vidmahe</p>
+                <p>Maheshwara Putraya Dheemahi</p>
+                <p>Tanno Subramanya Prachodayat</p>
+              </div>
             </div>
-            <div class="gayatri-lines" data-content-lang="en" hidden>
-              <p>Om Tat Purushaya Vidmahe</p>
-              <p>Maheshwara Putraya Dheemahi</p>
-              <p>Tanno Subramanya Prachodayat</p>
+            <div class="gayatri-logo" aria-hidden="true">
+              <img src="assets/logo.png" alt="" />
             </div>
           </div>
         </div>
@@ -71,7 +86,7 @@
       <section class="section mantra-108-section" id="murugan-108-mantras">
         <div class="prayer-page-wrap">
           <div class="mantra-108-heading" data-content-lang="ta">
-            <p class="section-kicker">108 மந்திரங்கள்</p>
+          
             <h2>முருகப்பெருமானின் 108 மந்திரங்கள்</h2>
             <p>ஒவ்வொரு மந்திரத்தையும் அமைதியாக ஜபித்து, மனதில் முருகப்பெருமானின் அருளை உணருங்கள்.</p>
           </div>
@@ -363,5 +378,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-

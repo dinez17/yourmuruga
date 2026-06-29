@@ -41,7 +41,12 @@
         <div class="social-links" aria-label="Social media links">
           <a href="#" aria-label="Facebook" title="Facebook"><span aria-hidden="true">f</span></a>
           <a href="#" aria-label="Instagram" title="Instagram"><span aria-hidden="true">◎</span></a>
-          <a href="https://www.youtube.com/@yourmuruga" aria-label="YouTube" target="_blank" rel="noopener" title="YouTube"><span aria-hidden="true">▶</span></a>
+          <a class="youtube-link" href="https://www.youtube.com/@yourmuruga" aria-label="YouTube" target="_blank" rel="noopener" title="YouTube">
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.5.5a3 3 0 0 0-2.1 2.1A31.2 31.2 0 0 0 2 12a31.2 31.2 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 22 12a31.2 31.2 0 0 0-.4-4.8Z" />
+              <path class="youtube-play" d="M10 15.4V8.6l5.8 3.4L10 15.4Z" />
+            </svg>
+          </a>
         </div>
 
         <div class="language-picker">

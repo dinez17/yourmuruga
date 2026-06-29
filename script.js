@@ -599,7 +599,7 @@ Object.assign(translations.ta, {
   heroPrimary: "Choose a Number",
   heroSecondary: "Get Your Muruga Answer",
   prayerHeroKicker: "தினசரி பக்தி",
-  prayerHeroTitle: "🙏 முருகப்பெருமானுக்கான பிரார்த்தனை",
+  prayerHeroTitle: "முருகப்பெருமானுக்கான பிரார்த்தனை",
   prayerHeroSubtitle: "மன அமைதி, தைரியம் மற்றும் நம்பிக்கைக்கான தினசரி பிரார்த்தனை",
   prayerHeroSmallOne: "வேல்! வேல்! வெற்றி வேல்!",
   prayerHeroSmallTwo: "முருகா ஹரோ ஹரா!",
